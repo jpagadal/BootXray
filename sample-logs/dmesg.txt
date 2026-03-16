@@ -1,0 +1,1765 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd4b2]
+[    0.000000] Linux version 6.8.0-1066-qcom (root@las-colo41-d19-6) (aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #67 SMP PREEMPT_DYNAMIC Fri Feb 27 12:48:12 UTC 2026 (Ubuntu 6.8.0-1066.67-qcom 6.8.12)
+[    0.000000] KASLR enabled
+[    0.000000] Machine model: Qualcomm Technologies, Inc. Addons IQ 9075 EVK
+[    0.000000] efi: EFI v2.7 by Qualcomm Technologies, Inc.
+[    0.000000] efi: RTPROP=0xac591098 MEMATTR=0xaa2de018 ESRT=0xaa487418 MOKvar=0xaa415000 INITRD=0xaa45c598 RNG=0xa1de0018 MEMRESERVE=0xa1de6f18 
+[    0.000000] random: crng init done
+[    0.000000] secureboot: Secure boot disabled
+[    0.000000] esrt: Reserving ESRT space from 0x00000000aa487418 to 0x00000000aa487450.
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f6400000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node secure-cdsp-region, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000000f6400000..0x00000000f83fffff (32768 KiB) map reusable secure-cdsp-region
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f5400000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qcom,audio-ml, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000000f5400000..0x00000000f63fffff (16384 KiB) map reusable qcom,audio-ml
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f2400000, size 48 MiB
+[    0.000000] OF: reserved mem: initialized node mem-dump-region, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000000f2400000..0x00000000f53fffff (49152 KiB) map reusable mem-dump-region
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f1000000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node qcom,qseecom, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000000f1000000..0x00000000f23fffff (20480 KiB) map reusable qcom,qseecom
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f0000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qcom,qseecom-ta, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000000f0000000..0x00000000f0ffffff (16384 KiB) map reusable qcom,qseecom-ta
+[    0.000000] OF: reserved mem: 0x0000000080000000..0x000000008fffffff (262144 KiB) nomap non-reusable sail-ss@80000000
+[    0.000000] OF: reserved mem: 0x0000000090000000..0x00000000905fffff (6144 KiB) nomap non-reusable hyp@90000000
+[    0.000000] OF: reserved mem: 0x0000000090600000..0x00000000907fffff (2048 KiB) nomap non-reusable xbl-boot@90600000
+[    0.000000] OF: reserved mem: 0x0000000090800000..0x000000009085ffff (384 KiB) nomap non-reusable aop-image@90800000
+[    0.000000] OF: reserved mem: 0x0000000090860000..0x000000009087ffff (128 KiB) nomap non-reusable aop-cmd-db@90860000
+[    0.000000] OF: reserved mem: 0x00000000908b0000..0x00000000908bffff (64 KiB) nomap non-reusable uefi-log@908b0000
+[    0.000000] OF: reserved mem: 0x00000000908c0000..0x00000000908c0fff (4 KiB) nomap non-reusable ddr-training-checksum@908c0000
+[    0.000000] OF: reserved mem: 0x00000000908f0000..0x00000000908fdfff (56 KiB) nomap non-reusable reserved@908f0000
+[    0.000000] OF: reserved mem: 0x00000000908fe000..0x00000000908fffff (8 KiB) nomap non-reusable secdata-apss@908fe000
+[    0.000000] OF: reserved mem: 0x0000000090900000..0x0000000090afffff (2048 KiB) nomap non-reusable smem@90900000
+[    0.000000] OF: reserved mem: 0x0000000090c00000..0x0000000090cfffff (1024 KiB) nomap non-reusable tz-sail-mailbox@90c00000
+[    0.000000] OF: reserved mem: 0x0000000090d00000..0x0000000090dfffff (1024 KiB) nomap non-reusable sail-ss@90d00000
+[    0.000000] OF: reserved mem: 0x0000000090e00000..0x00000000910fffff (3072 KiB) nomap non-reusable sail-ss@90e00000
+[    0.000000] OF: reserved mem: 0x0000000091a80000..0x0000000091afffff (512 KiB) nomap non-reusable gunyah-md@91a80000
+[    0.000000] OF: reserved mem: 0x0000000091b00000..0x0000000091b3ffff (256 KiB) nomap non-reusable aoss-backup@91b00000
+[    0.000000] OF: reserved mem: 0x0000000091b40000..0x0000000091b7ffff (256 KiB) nomap non-reusable cpucp-backup@91b40000
+[    0.000000] OF: reserved mem: 0x0000000091b80000..0x0000000091b8ffff (64 KiB) nomap non-reusable tz-config-backup@91b80000
+[    0.000000] OF: reserved mem: 0x0000000091b90000..0x0000000091b9ffff (64 KiB) nomap non-reusable ddr-training-data@91b90000
+[    0.000000] OF: reserved mem: 0x0000000091ba0000..0x0000000091ba0fff (4 KiB) nomap non-reusable cdt-data-backup@91ba0000
+[    0.000000] OF: reserved mem: 0x0000000093b00000..0x00000000949fffff (15360 KiB) nomap non-reusable lpass-machine-learning@93b00000
+[    0.000000] OF: reserved mem: 0x0000000094a00000..0x00000000951fffff (8192 KiB) nomap non-reusable adsp-rpc-remote-heap@94a00000
+[    0.000000] OF: reserved mem: 0x0000000095200000..0x00000000958fffff (7168 KiB) nomap non-reusable pil-camera@95200000
+[    0.000000] OF: reserved mem: 0x0000000095900000..0x00000000976fffff (30720 KiB) nomap non-reusable pil-adsp@95900000
+[    0.000000] OF: reserved mem: 0x0000000097700000..0x000000009777ffff (512 KiB) nomap non-reusable q6-adsp-dtb@97700000
+[    0.000000] OF: reserved mem: 0x0000000097780000..0x00000000977fffff (512 KiB) nomap non-reusable q6-gdsp0-dtb@97780000
+[    0.000000] OF: reserved mem: 0x0000000097800000..0x00000000995fffff (30720 KiB) nomap non-reusable pil-gdsp0@97800000
+[    0.000000] OF: reserved mem: 0x0000000099600000..0x000000009b3fffff (30720 KiB) nomap non-reusable pil-gdsp1@99600000
+[    0.000000] OF: reserved mem: 0x000000009b400000..0x000000009b47ffff (512 KiB) nomap non-reusable q6-gdsp1-dtb@9b400000
+[    0.000000] OF: reserved mem: 0x000000009b480000..0x000000009b4fffff (512 KiB) nomap non-reusable q6-cdsp0-dtb@9b480000
+[    0.000000] OF: reserved mem: 0x000000009b500000..0x000000009d2fffff (30720 KiB) nomap non-reusable pil-cdsp0@9b500000
+[    0.000000] OF: reserved mem: 0x000000009d300000..0x000000009d301fff (8 KiB) nomap non-reusable pil-gpu@9d300000
+[    0.000000] OF: reserved mem: 0x000000009d380000..0x000000009d3fffff (512 KiB) nomap non-reusable q6-cdsp1-dtb@9d380000
+[    0.000000] OF: reserved mem: 0x000000009d400000..0x000000009f1fffff (30720 KiB) nomap non-reusable pil-cdsp1@9d400000
+[    0.000000] OF: reserved mem: 0x000000009f200000..0x000000009f8fffff (7168 KiB) nomap non-reusable pil-cvp@9f200000
+[    0.000000] OF: reserved mem: 0x000000009f900000..0x00000000a08fffff (16384 KiB) nomap non-reusable pil-video@9f900000
+[    0.000000] OF: reserved mem: 0x00000000b0000000..0x00000000b07fffff (8192 KiB) nomap non-reusable firmware-region@b0000000
+[    0.000000] OF: reserved mem: 0x00000000d0000000..0x00000000d003ffff (256 KiB) nomap non-reusable scmi-region@d0000000
+[    0.000000] OF: reserved mem: 0x00000000d0040000..0x00000000d004ffff (64 KiB) nomap non-reusable firmware-logs@d0040000
+[    0.000000] OF: reserved mem: 0x00000000d0050000..0x00000000d0053fff (16 KiB) nomap non-reusable firmware-audio@d0050000
+[    0.000000] OF: reserved mem: 0x00000000d0054000..0x00000000d00effff (624 KiB) nomap non-reusable firmware-reserved@d0054000
+[    0.000000] OF: reserved mem: 0x00000000d00f0000..0x00000000d00fffff (64 KiB) nomap non-reusable firmware-quantum-test@d00f0000
+[    0.000000] OF: reserved mem: 0x00000000d0100000..0x00000000d12fffff (18432 KiB) nomap non-reusable tags@d0100000
+[    0.000000] OF: reserved mem: 0x00000000d1300000..0x00000000d17fffff (5120 KiB) nomap non-reusable qtee@d1300000
+[    0.000000] OF: reserved mem: 0x00000000d1800000..0x00000000d18fffff (1024 KiB) nomap non-reusable deepsleep-backup@d1800000
+[    0.000000] OF: reserved mem: 0x00000000d1900000..0x00000000d34fffff (28672 KiB) nomap non-reusable trusted-apps@d1900000
+[    0.000000] OF: reserved mem: 0x00000000db100000..0x00000000db1fffff (1024 KiB) nomap non-reusable tz-stat@db100000
+[    0.000000] OF: reserved mem: 0x00000000db200000..0x00000000db2fffff (1024 KiB) nomap non-reusable cpucp-fw@db200000
+[    0.000000] earlycon: qcom_geni0 at MMIO 0x0000000000a8c000 (options '115200n8')
+[    0.000000] printk: legacy bootconsole [qcom_geni0] enabled
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000090000000-0x0000000f7fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xf773158c0-0xf77318fff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000090000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x0000000f7fffffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000090000000-0x00000000907fffff]
+[    0.000000]   node   0: [mem 0x0000000090880000-0x00000000908affff]
+[    0.000000]   node   0: [mem 0x00000000908b0000-0x00000000908c0fff]
+[    0.000000]   node   0: [mem 0x00000000908c1000-0x00000000908effff]
+[    0.000000]   node   0: [mem 0x00000000908f0000-0x00000000908fffff]
+[    0.000000]   node   0: [mem 0x0000000090b00000-0x0000000090b3ffff]
+[    0.000000]   node   0: [mem 0x0000000090b40000-0x0000000090bfffff]
+[    0.000000]   node   0: [mem 0x0000000091100000-0x0000000091a7ffff]
+[    0.000000]   node   0: [mem 0x0000000091b00000-0x0000000091ba0fff]
+[    0.000000]   node   0: [mem 0x0000000091ba1000-0x0000000093afffff]
+[    0.000000]   node   0: [mem 0x00000000a0500000-0x00000000a08fffff]
+[    0.000000]   node   0: [mem 0x00000000a0900000-0x00000000aa414fff]
+[    0.000000]   node   0: [mem 0x00000000aa415000-0x00000000aa415fff]
+[    0.000000]   node   0: [mem 0x00000000aa416000-0x00000000aa7defff]
+[    0.000000]   node   0: [mem 0x00000000aa7df000-0x00000000aa7f1fff]
+[    0.000000]   node   0: [mem 0x00000000aa7f2000-0x00000000aa818fff]
+[    0.000000]   node   0: [mem 0x00000000aa819000-0x00000000aa81dfff]
+[    0.000000]   node   0: [mem 0x00000000aa81e000-0x00000000aa822fff]
+[    0.000000]   node   0: [mem 0x00000000aa823000-0x00000000aa834fff]
+[    0.000000]   node   0: [mem 0x00000000aa835000-0x00000000aa87cfff]
+[    0.000000]   node   0: [mem 0x00000000aa87d000-0x00000000aa890fff]
+[    0.000000]   node   0: [mem 0x00000000aa891000-0x00000000aa89cfff]
+[    0.000000]   node   0: [mem 0x00000000aa89d000-0x00000000aa8a5fff]
+[    0.000000]   node   0: [mem 0x00000000aa8a6000-0x00000000abaa7fff]
+[    0.000000]   node   0: [mem 0x00000000abaa8000-0x00000000abac7fff]
+[    0.000000]   node   0: [mem 0x00000000abac8000-0x00000000abafffff]
+[    0.000000]   node   0: [mem 0x00000000abb00000-0x00000000abffffff]
+[    0.000000]   node   0: [mem 0x00000000ac000000-0x00000000ac01ffff]
+[    0.000000]   node   0: [mem 0x00000000ac020000-0x00000000ac028fff]
+[    0.000000]   node   0: [mem 0x00000000ac029000-0x00000000ac067fff]
+[    0.000000]   node   0: [mem 0x00000000ac068000-0x00000000ac078fff]
+[    0.000000]   node   0: [mem 0x00000000ac079000-0x00000000ac085fff]
+[    0.000000]   node   0: [mem 0x00000000ac086000-0x00000000ac08dfff]
+[    0.000000]   node   0: [mem 0x00000000ac08e000-0x00000000ac547fff]
+[    0.000000]   node   0: [mem 0x00000000ac548000-0x00000000ac5bffff]
+[    0.000000]   node   0: [mem 0x00000000ac5c0000-0x00000000acff0fff]
+[    0.000000]   node   0: [mem 0x00000000ad000000-0x00000000af5cffff]
+[    0.000000]   node   0: [mem 0x00000000af5d0000-0x00000000af5d8fff]
+[    0.000000]   node   0: [mem 0x00000000af5d9000-0x00000000afffffff]
+[    0.000000]   node   0: [mem 0x00000000b0800000-0x00000000bee1afff]
+[    0.000000]   node   0: [mem 0x00000000c0000000-0x00000000c23fffff]
+[    0.000000]   node   0: [mem 0x00000000d0000000-0x00000000d18fffff]
+[    0.000000]   node   0: [mem 0x00000000d3500000-0x00000000d50fffff]
+[    0.000000]   node   0: [mem 0x00000000d6200000-0x00000000db0fffff]
+[    0.000000]   node   0: [mem 0x00000000db100000-0x00000000db1fffff]
+[    0.000000]   node   0: [mem 0x00000000db300000-0x00000000f85fffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x00000003ffffffff]
+[    0.000000]   node   0: [mem 0x0000000900000000-0x0000000bf9ffffff]
+[    0.000000]   node   0: [mem 0x0000000d00000000-0x0000000f7fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000090000000-0x0000000f7fffffff]
+[    0.000000] On node 0, zone DMA: 128 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 512 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 1280 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 128 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 18944 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 15 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 2048 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 4581 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 23552 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 7168 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 4352 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 31232 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 24576 pages in unavailable ranges
+[    0.000000] cma: Reserved 32 MiB at 0x00000000ee000000 on node -1
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.3
+[    0.000000] psci: OSI mode supported.
+[    0.000000] percpu: Embedded 53 pages/cpu s93992 r8192 d114904 u217088
+[    0.000000] pcpu-alloc: s93992 r8192 d114904 u217088 alloc=53*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Address authentication (architected QARMA5 algorithm)
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: SSBS not fully self-synchronizing
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.8.0-1066-qcom root=/dev/disk/by-partlabel/system ro ro console=ttyMSM0,115200n8 pcie_pme=nomsi earlycon qcom_scm.download_mode=1 reboot=panic_warm console=ttyMSM0,115200n8 pcie_pme=nomsi earlycon trace_event=sched:*,workqueue:*,initcall:*,power:cpu_frequency trace_buf_size=100M log_buf_len=16M kprobe_event=p:Preally_probe,really_probe,dev=+0(+0(%x0)):string,drv=+0(+0(%x1)):string;r:Rreally_probe,really_probe;p:Pplatform_probe,platform_probe,dev=+0(+0(%x0)):string;r:Rplatform_probe,platform_probe;p:Pplatform_dma_configure,platform_dma_configure,dev=+0(+0(%x0)):string;r:Rplatform_dma_configure,platform_dma_configure;p:Pof_platform_bus_probe,of_platform_bus_probe,root=+0(+0(%x0)):string,parent=+0(+0(%x2)):string;r:Rof_platform_bus_probe,of_platform_bus_probe;p:Pof_platform_populate,of_platform_populate,root=+0(+0(%x0)):string,parent=+0(+0(%x3)):string;r:Rof_platform_populate,of_platform_populate;
+[    0.000000] Unknown kernel command line parameters "BOOT_IMAGE=/boot/vmlinuz-6.8.0-1066-qcom", will be passed to user space.
+[    0.000000] printk: log_buf_len: 16777216 bytes
+[    0.000000] printk: early log buf free: 116368(88%)
+[    0.000000] Dentry cache hash table entries: 8388608 (order: 14, 67108864 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 9043787
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] stackdepot: allocating hash table via alloc_large_system_hash
+[    0.000000] stackdepot hash table entries: 1048576 (order: 12, 16777216 bytes, linear)
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000ea000000-0x00000000ee000000] (64MB)
+[    0.000000] Memory: 35496868K/36749360K available (22464K kernel code, 5536K rwdata, 15464K rodata, 11072K init, 913K bss, 1084556K reserved, 167936K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 60570 entries in 237 pages
+[    0.000000] ftrace: allocated 237 pages with 6 groups
+[    0.000000] Dynamic Preempt: voluntary
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] RCU Tasks Trace: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 988 SPIs implemented
+[    0.000000] GICv3: 1024 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000017a60000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000000] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.008271] arm-pv: using stolen time PV
+[    0.012468] Console: colour dummy device 80x25
+[    0.017085] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=19200)
+[    0.027613] pid_max: default: 32768 minimum: 301
+[    0.032406] LSM: initializing lsm=lockdown,capability,landlock,yama,apparmor,integrity
+[    0.040548] landlock: Up and running.
+[    0.044317] Yama: becoming mindful.
+[    0.047952] AppArmor: AppArmor initialized
+[    0.052260] Mount-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.060257] Mountpoint-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.069045] Scheduler tracepoints stat_sleep, stat_iowait, stat_blocked and stat_runtime require the kernel parameter schedstats=enable or kernel.sched_schedstats=1
+[    0.069591] rcu: Hierarchical SRCU implementation.
+[    0.089595] rcu: 	Max phase no-delay instances is 400.
+[    0.103944] Remapping and enabling EFI services.
+[    0.108885] Scheduler tracepoints stat_sleep, stat_iowait, stat_blocked and stat_runtime require the kernel parameter schedstats=enable or kernel.sched_schedstats=1
+[    0.109027] smp: Bringing up secondary CPUs ...
+[    0.143234] Detected PIPT I-cache on CPU1
+[    0.143315] GICv3: CPU1: found redistributor 100 region 0:0x0000000017a80000
+[    0.143423] CPU1: Booted secondary processor 0x0000000100 [0x410fd4b2]
+[    0.157662] Detected PIPT I-cache on CPU2
+[    0.157734] GICv3: CPU2: found redistributor 200 region 0:0x0000000017aa0000
+[    0.157840] CPU2: Booted secondary processor 0x0000000200 [0x410fd4b2]
+[    0.171956] Detected PIPT I-cache on CPU3
+[    0.172027] GICv3: CPU3: found redistributor 300 region 0:0x0000000017ac0000
+[    0.172118] CPU3: Booted secondary processor 0x0000000300 [0x410fd4b2]
+[    0.187538] Detected PIPT I-cache on CPU4
+[    0.187619] GICv3: CPU4: found redistributor 10000 region 0:0x0000000017ae0000
+[    0.187718] CPU4: Booted secondary processor 0x0000010000 [0x410fd4b2]
+[    0.201727] Detected PIPT I-cache on CPU5
+[    0.201775] GICv3: CPU5: found redistributor 10100 region 0:0x0000000017b00000
+[    0.201875] CPU5: Booted secondary processor 0x0000010100 [0x410fd4b2]
+[    0.215876] Detected PIPT I-cache on CPU6
+[    0.215925] GICv3: CPU6: found redistributor 10200 region 0:0x0000000017b20000
+[    0.216024] CPU6: Booted secondary processor 0x0000010200 [0x410fd4b2]
+[    0.229970] Detected PIPT I-cache on CPU7
+[    0.230023] GICv3: CPU7: found redistributor 10300 region 0:0x0000000017b40000
+[    0.230118] CPU7: Booted secondary processor 0x0000010300 [0x410fd4b2]
+[    0.230233] smp: Brought up 1 node, 8 CPUs
+[    0.361536] SMP: Total of 8 processors activated.
+[    0.366365] CPU: All CPU(s) started at EL1
+[    0.370578] CPU features: detected: 32-bit EL0 Support
+[    0.375858] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.384693] CPU features: detected: Common not Private translations
+[    0.391132] CPU features: detected: CRC32 instructions
+[    0.396410] CPU features: detected: Data cache clean to Point of Persistence
+[    0.403649] CPU features: detected: Generic authentication (architected QARMA5 algorithm)
+[    0.412047] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.417945] CPU features: detected: LSE atomic instructions
+[    0.423674] CPU features: detected: Privileged Access Never
+[    0.429402] CPU features: detected: RAS Extension Support
+[    0.434953] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.442174] alternatives: applying system-wide alternatives
+[    0.449990] CPU features: detected: Hardware dirty bit management on CPU0-7
+[    0.457893] devtmpfs: initialized
+[    0.474817] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.484836] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.492945] pinctrl core: initialized pinctrl subsystem
+[    0.498587] DMI not present or invalid.
+[    0.502895] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.509682] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    0.517416] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.525844] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.534091] audit: initializing netlink subsys (disabled)
+[    0.539748] audit: type=2000 audit(0.186:1): state=initialized audit_enabled=0 res=1
+[    0.539952] thermal_sys: Registered thermal governor 'fair_share'
+[    0.547713] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.553976] thermal_sys: Registered thermal governor 'step_wise'
+[    0.560145] thermal_sys: Registered thermal governor 'user_space'
+[    0.566313] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.572598] cpuidle: using governor ladder
+[    0.583525] cpuidle: using governor menu
+[    0.587663] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.594770] ASID allocator initialised with 32768 entries
+[    0.600548] Serial: AMBA PL011 UART driver
+[    0.606378] /lpass-stm: Fixed dependency cycle(s) with /lpi-funnel
+[    0.612768] /audio-etm0: Fixed dependency cycle(s) with /lpi-funnel
+[    0.619220] /lpi-funnel: Fixed dependency cycle(s) with /lpass-stm
+[    0.625577] /lpi-funnel: Fixed dependency cycle(s) with /audio-etm0
+[    0.641933] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor15: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    0.655238] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor14: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    0.668528] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor13: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    0.681818] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor12: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    0.695106] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor12
+[    0.708392] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor13
+[    0.721678] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor14
+[    0.734965] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor15
+[    0.748273] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor11: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    0.761563] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor10: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    0.774852] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor9: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    0.788061] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor8: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    0.801268] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor8
+[    0.814475] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor9
+[    0.827682] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor10
+[    0.840973] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor11
+[    0.854287] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor7: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    0.867485] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor6: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    0.880692] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor5: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    0.893901] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor4: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    0.907106] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor4
+[    0.920311] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor5
+[    0.933516] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor6
+[    0.946722] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor7
+[    0.959953] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor3: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    0.973151] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor2: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    0.986358] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor1: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    0.999565] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    1.012770] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor0
+[    1.025977] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor1
+[    1.039182] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor2
+[    1.052387] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor3
+[    1.065650] /soc@0/eud@88e1000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hd3ss3220@67/connector@0
+[    1.076814] /soc@0/eud@88e1000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800
+[    1.084516] /soc@0/geniqup@ac0000/i2c@a90000/hd3ss3220@67/connector@0: Fixed dependency cycle(s) with /soc@0/eud@88e1000
+[    1.095683] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    1.103365] /soc@0/phy@1d87000: Fixed dependency cycle(s) with /soc@0/ufs@1d84000
+[    1.111084] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    1.119035] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[    1.126923] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    1.134994] /soc@0/tpdm@400f000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[    1.142854] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/stm@4002000
+[    1.150805] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[    1.158873] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    1.167093] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    1.175317] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    1.183547] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    1.191771] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    1.199998] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    1.208243] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    1.216463] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    1.224686] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    1.232955] /soc@0/tpdm@482c000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.240867] /soc@0/funnel@4832000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.248959] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.256868] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.264731] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    1.272771] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    1.280811] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    1.288877] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4864000
+[    1.296924] /soc@0/funnel@4864000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    1.304993] /soc@0/funnel@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    1.313246] /soc@0/funnel@4940000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    1.321497] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    1.329538] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpdm@4980000
+[    1.337607] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    1.345678] /soc@0/tpdm@49a0000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    1.353719] /soc@0/funnel@49a3000: Fixed dependency cycle(s) with /soc@0/tpdm@49a0000
+[    1.361787] /soc@0/funnel@49a3000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    1.369880] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.377772] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    1.385813] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[    1.393881] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    1.402153] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.410015] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ad0000
+[    1.417875] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4850000
+[    1.425734] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@49d0000
+[    1.433595] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@482c000
+[    1.441454] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4841000
+[    1.449316] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4c12000
+[    1.457356] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4832000
+[    1.465419] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /lpass-funnel
+[    1.472786] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    1.480829] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    1.489052] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    1.497277] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /lpass-funnel
+[    1.504789] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.512847] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    1.521094] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    1.529316] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.537356] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /lpi-funnel
+[    1.544698] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[    1.552679] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    1.560632] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[    1.568974] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[    1.577284] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /dummy-sink
+[    1.584975] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[    1.592834] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[    1.600694] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[    1.608554] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[    1.616413] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[    1.624300] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    1.632372] /soc@0/tpdm@4b09000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.640262] /soc@0/tpdm@4b0a000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.648152] /soc@0/tpdm@4b0b000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.656042] /soc@0/tpdm@4b0c000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.663932] /soc@0/tpdm@4b0d000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    1.671795] /soc@0/funnel@4b83000: Fixed dependency cycle(s) with /soc@0/funnel@4940000
+[    1.680043] /soc@0/funnel@4b83000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    1.688295] /soc@0/tpdm@4ba0000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    1.696336] /soc@0/funnel@4ba3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ba0000
+[    1.704405] /soc@0/funnel@4ba3000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    1.712497] /soc@0/funnel@4c12000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    1.720569] /soc@0/tpda@4c43000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    1.728613] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4864000
+[    1.736834] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    1.745054] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/tpda@4c43000
+[    1.753119] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    1.761369] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c52000
+[    1.769230] /soc@0/tpda@4c52000: Fixed dependency cycle(s) with /soc@0/tpdm@4c50000
+[    1.777119] /soc@0/tpda@4c52000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    1.785159] /soc@0/funnel@4c53000: Fixed dependency cycle(s) with /soc@0/tpda@4c52000
+[    1.793227] /soc@0/funnel@4c53000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    1.801479] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    1.809340] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/tpdm@4e00000
+[    1.817201] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    1.825241] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    1.833281] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    1.841348] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    1.849391] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e35000
+[    1.857610] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e0d000
+[    1.865832] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    1.873897] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    1.882148] /soc@0/funnel@4e0d000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    1.890398] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    1.898439] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpdm@4e10000
+[    1.906507] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    1.914578] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    1.922619] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpdm@4e20000
+[    1.930688] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    1.938759] /soc@0/funnel@4e35000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    1.947009] /soc@0/tpdm@4e40000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    1.955052] /soc@0/funnel@4e42000: Fixed dependency cycle(s) with /soc@0/tpdm@4e40000
+[    1.963121] /soc@0/funnel@4e42000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    1.971192] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    1.979172] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    1.987152] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    1.995133] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.003113] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.011093] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.019073] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.027053] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.035004] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6740000
+[    2.042953] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6640000
+[    2.050903] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6540000
+[    2.058853] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6440000
+[    2.066802] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6340000
+[    2.074752] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6240000
+[    2.082701] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6140000
+[    2.090651] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6040000
+[    2.098626] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    2.106851] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    2.114893] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    2.123136] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    2.131386] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    2.139276] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    2.147138] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6861000
+[    2.154997] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6860000
+[    2.162857] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[    2.170716] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[    2.178603] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    2.186675] /soc@0/tpdm@68a0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    2.194565] /soc@0/tpdm@68b0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    2.202433] /soc@0/usb@a6f8800: Fixed dependency cycle(s) with /soc@0/eud@88e1000
+[    2.210123] /soc@0/usb@a8f8800: Fixed dependency cycle(s) with /soc@0/connector-usb1
+[    2.218081] /soc@0/usb@a4f8800: Fixed dependency cycle(s) with /soc@0/connector-usb2
+[    2.226065] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af5c000
+[    2.241405] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[    2.256751] /soc@0/display-subsystem@ae00000/phy@aec2a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    2.267910] /soc@0/display-subsystem@ae00000/phy@aec5a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    2.279080] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    2.294436] /soc@0/display-subsystem@ae00000/displayport-controller@af5c000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    2.309780] /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@aec5a00
+[    2.320938] /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@aec2a00
+[    2.332161] /soc@0/interrupt-controller@17a00000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17a00000
+[    2.343098] /soc@0/connector-usb1: Fixed dependency cycle(s) with /soc@0/usb@a8f8800
+[    2.351052] /soc@0/connector-usb2: Fixed dependency cycle(s) with /soc@0/usb@a4f8800
+[    2.360659] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor15: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.373962] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor14: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.387257] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor13: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.400551] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor12: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.413838] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor12
+[    2.427125] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor13
+[    2.440412] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor14
+[    2.453698] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor15
+[    2.467243] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor15: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.480581] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor14: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.493918] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor13: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.507254] /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-sensor12: Fixed dependency cycle(s) with /soc@0/qcom,cci3@ac16000/qcom,cam-gmsl-deserializer3
+[    2.520611] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor11: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.533909] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor10: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.547205] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor9: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.560419] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor8: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.573626] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor8
+[    2.586833] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor9
+[    2.600039] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor10
+[    2.613325] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor11
+[    2.626861] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor11: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.640197] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor10: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.653536] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor9: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.666779] /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-sensor8: Fixed dependency cycle(s) with /soc@0/qcom,cci2@ac15000/qcom,cam-gmsl-deserializer2
+[    2.680061] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor7: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.693277] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor6: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.706493] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor5: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.719707] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor4: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.732914] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor4
+[    2.746120] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor5
+[    2.759326] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor6
+[    2.772532] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor7
+[    2.786107] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor7: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.799364] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor6: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.812609] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor5: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.825863] /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-sensor4: Fixed dependency cycle(s) with /soc@0/qcom,cci1@ac14000/qcom,cam-gmsl-deserializer1
+[    2.839136] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor3: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.852352] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor2: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.865566] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor1: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.878780] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.891987] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor0
+[    2.905193] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor1
+[    2.918399] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor2
+[    2.931605] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor3
+[    2.945180] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor3: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.958439] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor2: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.971694] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor1: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.984938] /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-sensor0: Fixed dependency cycle(s) with /soc@0/qcom,cci0@ac13000/qcom,cam-gmsl-deserializer0
+[    2.999407] /soc@0/eud@88e1000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hd3ss3220@67/connector@0
+[    3.010582] /soc@0/eud@88e1000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800
+[    3.018410] /soc@0/geniqup@ac0000/i2c@a90000/hd3ss3220@67/connector@0: Fixed dependency cycle(s) with /soc@0/eud@88e1000
+[    3.030126] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    3.037859] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    3.045553] /soc@0/phy@1d87000: Fixed dependency cycle(s) with /soc@0/ufs@1d84000
+[    3.053576] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    3.061548] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[    3.069428] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    3.077484] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[    3.085378] /soc@0/tpdm@400f000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[    3.093298] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    3.101373] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    3.109329] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/stm@4002000
+[    3.117287] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[    3.125357] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    3.133595] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    3.141819] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.150045] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.158267] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    3.166489] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    3.174727] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    3.182976] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    3.191222] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    3.199448] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[    3.207676] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    3.215951] /soc@0/tpdm@482c000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.223866] /soc@0/funnel@4832000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.231961] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.239889] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.247791] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    3.255830] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    3.263872] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    3.271933] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4864000
+[    3.280009] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4864000
+[    3.288059] /soc@0/funnel@4864000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    3.296130] /soc@0/funnel@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.304408] /soc@0/funnel@4940000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    3.312669] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    3.320759] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    3.328810] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[    3.336856] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpdm@4980000
+[    3.344929] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    3.353027] /soc@0/tpdm@49a0000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    3.361118] /soc@0/tpdm@49a0000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    3.369167] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@49a3000
+[    3.377216] /soc@0/funnel@49a3000: Fixed dependency cycle(s) with /soc@0/tpdm@49a0000
+[    3.385285] /soc@0/funnel@49a3000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    3.393402] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.401330] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    3.409409] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    3.417459] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[    3.425686] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[    3.433757] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    3.442041] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.449973] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.457887] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.465793] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.473699] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.481604] /soc@0/funnel@4832000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.489688] /soc@0/tpdm@482c000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.497576] /lpass-funnel: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.504916] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ad0000
+[    3.512784] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4850000
+[    3.520649] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@49d0000
+[    3.528517] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@482c000
+[    3.536382] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4841000
+[    3.544249] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4c12000
+[    3.552289] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4832000
+[    3.560354] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /lpass-funnel
+[    3.567710] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.575787] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.583845] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.592095] /lpass-funnel: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.599613] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    3.607833] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    3.616052] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /lpass-funnel
+[    3.623570] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.631630] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    3.639891] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    3.648142] /lpi-funnel: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    3.655502] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[    3.663729] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.671766] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /lpi-funnel
+[    3.679103] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[    3.687069] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[    3.695051] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    3.703009] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[    3.711336] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[    3.719679] /dummy-sink: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[    3.727391] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[    3.735707] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /dummy-sink
+[    3.743414] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.751462] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[    3.759320] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[    3.767177] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[    3.775034] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[    3.782894] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[    3.790773] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[    3.798836] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[    3.806726] /soc@0/tpdm@4b09000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.814607] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[    3.822500] /soc@0/tpdm@4b0a000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.830388] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[    3.838285] /soc@0/tpdm@4b0b000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.846168] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[    3.854059] /soc@0/tpdm@4b0c000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.861943] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[    3.869832] /soc@0/tpdm@4b0d000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[    3.877744] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    3.885995] /soc@0/funnel@4940000: Fixed dependency cycle(s) with /soc@0/funnel@4b83000
+[    3.894221] /soc@0/funnel@4b83000: Fixed dependency cycle(s) with /soc@0/funnel@4940000
+[    3.902469] /soc@0/funnel@4b83000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    3.910765] /soc@0/tpdm@4ba0000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    3.918843] /soc@0/tpdm@4ba0000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    3.926891] /soc@0/tpda@4863000: Fixed dependency cycle(s) with /soc@0/funnel@4ba3000
+[    3.934936] /soc@0/funnel@4ba3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ba0000
+[    3.943007] /soc@0/funnel@4ba3000: Fixed dependency cycle(s) with /soc@0/tpda@4863000
+[    3.951088] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4c12000
+[    3.959177] /soc@0/funnel@4c12000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[    3.967294] /soc@0/tpda@4c43000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.975374] /soc@0/tpda@4c43000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.983443] /soc@0/funnel@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.991674] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    3.999901] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4864000
+[    4.008128] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    4.016346] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/tpda@4c43000
+[    4.024410] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    4.032677] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c52000
+[    4.040589] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c52000
+[    4.048458] /soc@0/tpda@4c52000: Fixed dependency cycle(s) with /soc@0/tpdm@4c50000
+[    4.056347] /soc@0/tpda@4c52000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    4.064427] /soc@0/tpda@4c52000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    4.072475] /soc@0/funnel@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c53000
+[    4.080701] /soc@0/funnel@4c53000: Fixed dependency cycle(s) with /soc@0/tpda@4c52000
+[    4.088770] /soc@0/funnel@4c53000: Fixed dependency cycle(s) with /soc@0/funnel@4c44000
+[    4.097038] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.104961] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.112829] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/tpdm@4e00000
+[    4.120697] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    4.128735] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    4.136773] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    4.144832] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    4.152908] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    4.160959] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    4.169185] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e35000
+[    4.177404] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e0d000
+[    4.185623] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.193690] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[    4.201949] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e0d000
+[    4.210200] /soc@0/funnel@4e0d000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    4.218466] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    4.226559] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    4.234608] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[    4.242653] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpdm@4e10000
+[    4.250725] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.258812] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    4.266904] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    4.274954] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[    4.283004] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpdm@4e20000
+[    4.291072] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.299154] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4e35000
+[    4.307407] /soc@0/funnel@4e35000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[    4.315673] /soc@0/tpdm@4e40000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    4.323764] /soc@0/tpdm@4e40000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    4.331813] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e42000
+[    4.339864] /soc@0/funnel@4e42000: Fixed dependency cycle(s) with /soc@0/tpdm@4e40000
+[    4.347934] /soc@0/funnel@4e42000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[    4.356023] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.364016] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.372007] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.380003] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.387994] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.395985] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.403976] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.411964] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.419957] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.427941] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.435922] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.443900] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.451884] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.459863] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.467843] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.475826] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.483783] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6740000
+[    4.491743] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6640000
+[    4.499699] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6540000
+[    4.507658] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6440000
+[    4.515615] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6340000
+[    4.523572] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6240000
+[    4.531531] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6140000
+[    4.539489] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6040000
+[    4.547469] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    4.555730] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    4.563962] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    4.572191] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.580232] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[    4.588476] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[    4.596756] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.604657] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.612574] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.620466] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.628334] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.636381] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6861000
+[    4.644248] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6860000
+[    4.652116] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[    4.659975] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[    4.667856] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[    4.675921] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[    4.683817] /soc@0/tpdm@68a0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.691709] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[    4.699600] /soc@0/tpdm@68b0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[    4.707877] /soc@0/eud@88e1000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800
+[    4.715583] /soc@0/usb@a6f8800: Fixed dependency cycle(s) with /soc@0/eud@88e1000
+[    4.723483] /soc@0/usb@a8f8800: Fixed dependency cycle(s) with /soc@0/connector-usb1
+[    4.731595] /soc@0/usb@a4f8800: Fixed dependency cycle(s) with /soc@0/connector-usb2
+[    4.741089] /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.751232] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af5c000
+[    4.766578] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[    4.781923] /soc@0/display-subsystem@ae00000/phy@aec2a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.793082] /soc@0/display-subsystem@ae00000/phy@aec5a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.804260] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    4.819626] /soc@0/display-subsystem@ae00000/displayport-controller@af5c000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    4.835029] /soc@0/display-subsystem@ae00000/phy@aec5a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.846189] /soc@0/display-subsystem@ae00000/phy@aec2a00: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.857351] /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    4.867439] /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@aec5a00
+[    4.878598] /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@aec2a00
+[    4.895708] /soc@0/usb@a8f8800: Fixed dependency cycle(s) with /soc@0/connector-usb1
+[    4.903699] /soc@0/connector-usb1: Fixed dependency cycle(s) with /soc@0/usb@a8f8800
+[    4.911708] /soc@0/usb@a4f8800: Fixed dependency cycle(s) with /soc@0/connector-usb2
+[    4.919676] /soc@0/connector-usb2: Fixed dependency cycle(s) with /soc@0/usb@a4f8800
+[    4.928456] /soc@0/funnel@4940000: Fixed dependency cycle(s) with /turing0-etm0
+[    4.936062] /turing0-etm0: Fixed dependency cycle(s) with /soc@0/funnel@4940000
+[    4.945679] Modules: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    4.952920] Modules: 0 pages in range for non-PLT usage
+[    4.952922] Modules: 510368 pages in range for PLT usage
+[    4.958732] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    4.971172] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    4.977612] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    4.984579] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    4.991017] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    4.997983] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    5.004422] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    5.011389] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    5.018956] ACPI: Interpreter disabled.
+[    5.025568] iommu: Default domain type: Translated
+[    5.030495] iommu: DMA domain TLB invalidation policy: strict mode
+[    5.037277] SCSI subsystem initialized
+[    5.041199] libata version 3.00 loaded.
+[    5.041241] usbcore: registered new interface driver usbfs
+[    5.046886] usbcore: registered new interface driver hub
+[    5.052354] usbcore: registered new device driver usb
+[    5.057640] pps_core: LinuxPPS API ver. 1 registered
+[    5.062740] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    5.072121] PTP clock support registered
+[    5.076277] EDAC MC: Ver: 3.0.0
+[    5.079664] CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[    5.086891] scmi_core: SCMI protocol bus registered
+[    5.093424] efivars: Registered efivars operations
+[    5.098508] qcom_scm: convention: smc arm 64
+[    5.103165] qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+[    5.110768] qcom_scm firmware:scm: qseecom: untested machine, skipping
+[    5.118176] NetLabel: Initializing
+[    5.121685] NetLabel:  domain hash size = 128
+[    5.126167] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    5.131999] NetLabel:  unlabeled traffic allowed by default
+[    5.137836] mctp: management component transport protocol core
+[    5.143831] NET: Registered PF_MCTP protocol family
+[    5.148894] vgaarb: loaded
+[    5.151882] clocksource: Switched to clocksource arch_sys_counter
+[    5.160397] VFS: Disk quotas dquot_6.6.0
+[    5.164467] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    5.171812] AppArmor: AppArmor Filesystem Enabled
+[    5.176684] pnp: PnP ACPI: disabled
+[    5.183516] NET: Registered PF_INET protocol family
+[    5.188654] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    5.213331] tcp_listen_portaddr_hash hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    5.222323] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    5.230457] TCP established hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    5.239293] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    5.247089] TCP: Hash tables configured (established 524288 bind 65536)
+[    5.254081] MPTCP token hash table entries: 65536 (order: 8, 1572864 bytes, linear)
+[    5.262225] UDP hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    5.269504] UDP-Lite hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    5.277295] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    5.283126] NET: Registered PF_XDP protocol family
+[    5.288052] PCI: CLS 0 bytes, default 64
+[    5.292191] Trying to unpack rootfs image as initramfs...
+[    5.297884] kvm [1]: HYP mode not available
+[    5.302736] Initialise system trusted keyrings
+[    5.307365] Key type blacklist registered
+[    5.311630] workingset: timestamp_bits=42 max_order=24 bucket_order=0
+[    5.318286] zbud: loaded
+[    5.321249] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    5.327435] fuse: init (API version 7.39)
+[    5.331813] integrity: Platform Keyring initialized
+[    5.336848] integrity: Machine keyring initialized
+[    5.351465] Key type asymmetric registered
+[    5.355678] Asymmetric key parser 'x509' registered
+[    5.360724] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[    5.368427] io scheduler mq-deadline registered
+[    5.378200] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    5.388473] msm_mem_dump mem-dump: assigned reserved memory node mem-dump-region
+[    5.404077] MSM Memory Dump apps data table set up
+[    5.409224] MSM Memory Dump base table set up in IMEM
+[    5.416566] vreg_s4a: Setting 1800000-1816000uV
+[    5.416585] vreg_l1c: Setting 1140000-1260000uV
+[    5.419084] vreg_s4e: Setting 970000-1520000uV
+[    5.419266] vreg_s7e: Setting 1010000-1170000uV
+[    5.419373] vreg_s9e: Setting 300000-570000uV
+[    5.419453] vreg_l6e: Setting 1280000-1450000uV
+[    5.419547] vreg_l8e: Setting 1800000-1950000uV
+[    5.420291] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    5.421385] vreg_s5a: Setting 1850000-1996000uV
+[    5.423648] msm_serial: driver initialized
+[    5.426053] vreg_l2c: Setting 900000-1100000uV
+[    5.426461] arm-smmu 15000000.iommu: probing hardware configuration...
+[    5.426464] arm-smmu 15000000.iommu: SMMUv2 with:
+[    5.426486] arm-smmu 15000000.iommu: 	stage 1 translation
+[    5.426487] arm-smmu 15000000.iommu: 	coherent table walk
+[    5.426490] arm-smmu 15000000.iommu: 	stream matching with 165 register groups
+[    5.426500] arm-smmu 15000000.iommu: 	98 context banks (0 stage-2 only)
+[    5.426511] arm-smmu 15000000.iommu: 	Limiting the stream matching groups to 128
+[    5.427163] arm-smmu 15000000.iommu: 	Supported page sizes: 0x61311000
+[    5.427165] arm-smmu 15000000.iommu: 	Stage-1: 36-bit VA -> 36-bit IPA
+[    5.427326] arm-smmu 15000000.iommu: 	preserved 0 boot mappings
+[    5.429748] arm-smmu 15200000.iommu: probing hardware configuration...
+[    5.429750] arm-smmu 15200000.iommu: SMMUv2 with:
+[    5.429763] arm-smmu 15200000.iommu: 	stage 1 translation
+[    5.429764] arm-smmu 15200000.iommu: 	coherent table walk
+[    5.429768] arm-smmu 15200000.iommu: 	stream matching with 64 register groups
+[    5.429777] arm-smmu 15200000.iommu: 	62 context banks (0 stage-2 only)
+[    5.430125] arm-smmu 15200000.iommu: 	Supported page sizes: 0x61311000
+[    5.430126] arm-smmu 15200000.iommu: 	Stage-1: 36-bit VA -> 36-bit IPA
+[    5.430247] arm-smmu 15200000.iommu: 	preserved 0 boot mappings
+[    5.430570] vreg_s9a: Setting 535000-1120000uV
+[    5.435245] vreg_l3c: Setting 1100000-1300000uV
+[    5.439845] vreg_l4a: Setting 788000-1050000uV
+[    5.443142] Freeing initrd memory: 70504K
+[    5.446352] loop: module loaded
+[    5.449054] vreg_l4c: Setting 1200000-1200000uV
+[    5.449114] vreg_l5a: Setting 870000-950000uV
+[    5.449198] vreg_l6a: Setting 870000-970000uV
+[    5.449278] vreg_l7a: Setting 720000-950000uV
+[    5.449351] vreg_l8a: Setting 2504000-3300000uV
+[    5.449424] vreg_l9a: Setting 2970000-3544000uV
+[    5.456456] qcom_system_heap_create: DMA-BUF Heap: Created 'qcom,system'
+[    5.460250] vreg_l5c: Setting 1100000-1300000uV
+[    5.464420] qcom_secure_system_heap_create: DMA-BUF Heap: Created 'qcom,secure-pixel'
+[    5.469023] vreg_l6c: Setting 1620000-1980000uV
+[    5.475680] qcom_secure_system_heap_create: DMA-BUF Heap: Created 'qcom,secure-non-pixel'
+[    5.480592] vreg_l7c: Setting 1620000-2000000uV
+[    5.486232] platform soc@0:qcom,dma-heaps:qcom,qseecom: assigned reserved memory node qcom,qseecom
+[    5.491688] vreg_l8c: Setting 2400000-3300000uV
+[    5.499095] platform soc@0:qcom,dma-heaps:qcom,qseecom_ta: assigned reserved memory node qcom,qseecom-ta
+[    5.505868] vreg_l9c: Setting 1650000-2700000uV
+[    5.513453] platform soc@0:qcom,dma-heaps:qcom,secure_cdsp: assigned reserved memory node secure-cdsp-region
+[    5.713274] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,qseecom
+[    5.719748] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,qseecom-ta
+[    5.726477] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,cma-secure-cdsp
+[    5.734165] spmi spmi-0: PMIC arbiter version v5 (0x50020000)
+[    5.751049] tun: Universal TUN/TAP device driver, 1.6
+[    5.756328] usbcore: registered new interface driver ax_usb_nic
+[    5.762634] PPP generic driver version 2.4.2
+[    5.790321] mousedev: PS/2 mouse device common for all mice
+[    5.796273] i2c_dev: i2c /dev entries driver
+[    5.801589] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    5.814100] device-mapper: uevent: version 1.0.3
+[    5.818925] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[    5.828358] sdhci: Secure Digital Host Controller Interface driver
+[    5.834719] sdhci: Copyright(c) Pierre Ossman
+[    5.839557] Synopsys Designware Multimedia Card Interface Driver
+[    5.846063] sdhci-pltfm: SDHCI platform and OF driver helper
+[    5.855556] ledtrig-cpu: registered to indicate activity on CPUs
+[    5.862184] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    5.868958] Running under Gunyah hypervisor 51/v1
+[    5.879686] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    5.889094] watchdog: Delayed init of the lockup detector failed: -19
+[    5.894074] drop_monitor: Initializing network drop monitor service
+[    5.895719] watchdog: Hard watchdog permanently disabled
+[    5.902319] NET: Registered PF_INET6 protocol family
+[    5.932348] Segment Routing with IPv6
+[    5.936164] In-situ OAM (IOAM) with IPv6
+[    5.940265] NET: Registered PF_PACKET protocol family
+[    5.945582] Key type dns_resolver registered
+[    5.953276] registered taskstats version 1
+[    5.963715] Loading compiled-in X.509 certificates
+[    5.970145] Loaded X.509 cert 'Build time autogenerated kernel key: 3ef94c3b8ccc669ae428c521178c3a2cf1ac4f26'
+[    5.980990] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+[    5.992279] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    6.002970] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    6.013236] blacklist: Loading compiled-in revocation X.509 certificates
+[    6.020153] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    6.030257] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    6.040987] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    6.052070] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    6.062801] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    6.073795] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    6.084792] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    6.095780] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    6.115278] Key type .fscrypt registered
+[    6.119332] Key type fscrypt-provisioning registered
+[    6.156795] Key type encrypted registered
+[    6.160947] AppArmor: AppArmor sha256 policy hashing enabled
+[    6.171151] ima: secureboot mode disabled
+[    6.175304] ima: No TPM chip found, activating TPM-bypass!
+[    6.180964] Loading compiled-in module X.509 certificates
+[    6.186990] Loaded X.509 cert 'Build time autogenerated kernel key: 3ef94c3b8ccc669ae428c521178c3a2cf1ac4f26'
+[    6.197179] ima: Allocated hash algorithm: sha256
+[    6.202057] ima: No architecture policies found
+[    6.206750] evm: Initialising EVM extended attributes:
+[    6.212031] evm: security.selinux
+[    6.215442] evm: security.SMACK64
+[    6.218856] evm: security.SMACK64EXEC
+[    6.222622] evm: security.SMACK64TRANSMUTE
+[    6.226840] evm: security.SMACK64MMAP
+[    6.230607] evm: security.apparmor
+[    6.234114] evm: security.ima
+[    6.237168] evm: security.capability
+[    6.240853] evm: HMAC attrs: 0x1
+[    6.260120] bam-dma-engine 1dc4000.dma-controller: Adding to iommu group 0
+[    6.260207] qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    6.263914] geni_se_qup 8c0000.geniqup: Adding to iommu group 1
+[    6.265865] qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    6.266163] qcom-pcie 1c10000.pcie: supply vdda not found, using dummy regulator
+[    6.266212] qcom-pcie 1c10000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    6.266318] qcom-pcie 1c10000.pcie: host bridge /pcie@1c10000 ranges:
+[    6.266328] qcom-pcie 1c10000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    6.266333] qcom-pcie 1c10000.pcie:      MEM 0x0060300000..0x007fffffff -> 0x0060300000
+[    6.274313] 88c000.serial: ttyHS1 at MMIO 0x88c000 (irq = 226, base_baud = 0) is a MSM
+[    6.277395] qcom-pcie 1c00000.pcie: host bridge /pcie@1c00000 ranges:
+[    6.291807] qcom-pcie 1c00000.pcie:       IO 0x0040200000..0x00402fffff -> 0x0000000000
+[    6.291849] serial serial0: tty port ttyHS1 registered
+[    6.294971] qcom-pcie 1c00000.pcie:      MEM 0x0040300000..0x005fffffff -> 0x0040300000
+[    6.300570] pca953x 18-0038: supply vcc not found, using dummy regulator
+[    6.303270] pca953x 18-0038: using no AI
+[    6.306118] pca953x 18-0039: supply vcc not found, using dummy regulator
+[    6.308810] pca953x 18-0039: using no AI
+[    6.313273] pca953x 18-003a: supply vcc not found, using dummy regulator
+[    6.315970] pca953x 18-003a: using no AI
+[    6.318751] pca953x 18-003b: supply vcc not found, using dummy regulator
+[    6.321438] pca953x 18-003b: using no AI
+[    6.324739] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.328947] geni_se_qup 9c0000.geniqup: Adding to iommu group 2
+[    6.332645] 980000.serial: ttyHS2 at MMIO 0x980000 (irq = 230, base_baud = 0) is a MSM
+[    6.336630] geni_se_qup ac0000.geniqup: Adding to iommu group 3
+[    6.340344] a8c000.serial: ttyMSM0 at MMIO 0xa8c000 (irq = 231, base_baud = 0) is a MSM
+[    6.365510] printk: legacy console [ttyMSM0] enabled
+[    6.375722] printk: legacy bootconsole [qcom_geni0] disabled
+[    6.384097] qcom-pcie 1c10000.pcie: iATU: unroll T, 32 ob, 8 ib, align 4K, limit 1024G
+[    6.395783] qcom-pcie 1c10000.pcie: PCI host bridge to bus 0001:00
+[    6.402135] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    6.404414] /soc@0/geniqup@ac0000/i2c@a90000/hd3ss3220@67/connector@0: Fixed dependency cycle(s) with /soc@0/eud@88e1000
+[    6.407774] pci_bus 0001:00: root bus resource [io  0x0000-0xfffff]
+[    6.407778] pci_bus 0001:00: root bus resource [mem 0x60300000-0x7fffffff]
+[    6.407846] pci 0001:00:00.0: [17cb:0115] type 01 class 0x060400 PCIe Root Port
+[    6.415710] qcom-pcie 1c00000.pcie: iATU: unroll T, 32 ob, 8 ib, align 4K, limit 1024G
+[    6.419597] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.425385] pci 0001:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    6.436094] qcom-ice 1d88000.crypto: Found QC Inline Crypto Engine (ICE) v3.2.0
+[    6.439941] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    6.439946] pci 0001:00:00.0:   bridge window [io  0x0000-0x0fff]
+[    6.448072] qcom-ice 1d88000.crypto: QC ICE HWKM (Hardware Key Manager) version = 1
+[    6.457712] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    6.457717] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    6.464199] ufshcd-qcom 1d84000.ufs: Adding to iommu group 4
+[    6.471339] pci 0001:00:00.0: PME# supported from D0 D3hot D3cold
+[    6.479014] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    6.482951] pci 0001:00:00.0: PTM enabled (root), 16ns granularity
+[    6.491201] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    6.501358] pci 0001:00:00.0: BAR 0 [mem 0x60300000-0x60300fff]: assigned
+[    6.501406] qcom-pcie 1c00000.pcie: PCI host bridge to bus 0000:00
+[    6.501411] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    6.501415] pci_bus 0000:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+[    6.501417] pci_bus 0000:00: root bus resource [mem 0x40300000-0x5fffffff]
+[    6.501482] pci 0000:00:00.0: [17cb:0115] type 01 class 0x060400 PCIe Root Port
+[    6.501491] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    6.501493] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    6.501497] pci 0000:00:00.0:   bridge window [io  0x100000-0x100fff]
+[    6.501499] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    6.501503] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    6.501536] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    6.501565] pci 0000:00:00.0: PTM enabled (root), 16ns granularity
+[    6.504994] pci 0000:01:00.0: [17cb:1103] type 00 class 0x028000 PCIe Endpoint
+[    6.505156] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+[    6.505481] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[    6.508828] scsi host0: ufshcd
+[    6.511516] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    6.511694] pcieport 0001:00:00.0: Adding to iommu group 5
+[    6.511956] pci 0000:00:00.0: bridge window [mem 0x40400000-0x405fffff]: assigned
+[    6.511959] pci 0000:00:00.0: BAR 0 [mem 0x40300000-0x40300fff]: assigned
+[    6.511963] pci 0000:01:00.0: BAR 0 [mem 0x40400000-0x405fffff 64bit]: assigned
+[    6.511995] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    6.511999] pci 0000:00:00.0:   bridge window [mem 0x40400000-0x405fffff]
+[    6.574046] scsi 0:0:0:49488: Well-known LUN    MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.581622] pcieport 0000:00:00.0: Adding to iommu group 6
+[    6.581652] pcieport 0001:00:00.0: PME: Signaling with IRQ 250
+[    6.581752] pcieport 0001:00:00.0: AER: enabled with IRQ 250
+[    6.583981] pcieport 0001:00:00.0: DPC: enabled with IRQ 250
+[    6.583984] pcieport 0001:00:00.0: DPC: error containment capabilities: Int Msg #0, RPExt- PoisonedTLP- SwTrigger- RP PIO Log 0, DL_ActiveErr-
+[    6.589978] ufs_device_wlun 0:0:0:49488: Attached scsi generic sg0 type 30
+[    6.594988] reg-fixed-voltage soc@0:vbus_supply_regulator_1: nonexclusive access to GPIO for (default)
+[    6.595254] pcieport 0000:00:00.0: PME: Signaling with IRQ 252
+[    6.595296] reg-fixed-voltage soc@0:vbus_supply_regulator_0: nonexclusive access to GPIO for (default)
+[    6.595354] pcieport 0000:00:00.0: AER: enabled with IRQ 252
+[    6.595831] pcieport 0000:00:00.0: DPC: enabled with IRQ 252
+[    6.595834] pcieport 0000:00:00.0: DPC: error containment capabilities: Int Msg #0, RPExt- PoisonedTLP- SwTrigger- RP PIO Log 0, DL_ActiveErr-
+[    6.613631] scsi 0:0:0:49476: Well-known LUN    MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.621666] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.629245] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    6.636487] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.642473] scsi 0:0:0:49456: Well-known LUN    MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.649806] sdhci_msm 87c4000.sdhci: Adding to iommu group 7
+[    6.663628] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    6.669304] sdhci_msm 87c4000.sdhci: Got CD GPIO
+[    6.669625] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.670630] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.671522] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.676841] scsi 0:0:0:0: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.684145] sdhci_msm 87c4000.sdhci: TCXO clk not present (-2)
+[    6.692323] clk: Disabling unused clocks
+[    6.692359] scsi 0:0:0:1: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.693811] scsi 0:0:0:2: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.695271] scsi 0:0:0:3: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.696725] scsi 0:0:0:4: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.946482] scsi 0:0:0:5: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.956463] scsi 0:0:0:6: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.973264] scsi 0:0:0:7: Direct-Access     MICRON   MT128GBCAV2U31AI 0302 PQ: 0 ANSI: 6
+[    6.979618] mmc1: SDHCI controller on 87c4000.sdhci [87c4000.sdhci] using ADMA 64-bit
+[    6.988699] sd 0:0:0:0: Attached scsi generic sg3 type 0
+[    6.990312] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    6.990706] sd 0:0:0:0: [sda] 29976576 4096-byte logical blocks: (123 GB/114 GiB)
+[    6.991259] sd 0:0:0:0: [sda] Write Protect is off
+[    6.991264] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    6.992157] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    6.992164] sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+[    6.992168] sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    6.994140]  sda: sda1 sda2 sda3
+[    6.994330] sd 0:0:0:0: [sda] Attached SCSI disk
+[    6.995238] sd 0:0:0:1: Attached scsi generic sg4 type 0
+[    6.995508] sd 0:0:0:1: [sdb] 5120 4096-byte logical blocks: (21.0 MB/20.0 MiB)
+[    6.995611] sd 0:0:0:1: [sdb] Write Protect is off
+[    6.995614] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    6.995856] sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, supports DPO and FUA
+[    6.995860] sd 0:0:0:1: [sdb] Preferred minimum I/O size 4096 bytes
+[    6.995862] sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    6.997667]  sdb: sdb1 sdb2 sdb3 sdb4
+[    6.997873] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    7.007914] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.013257] sd 0:0:0:2: Attached scsi generic sg5 type 0
+[    7.014050] sd 0:0:0:2: [sdc] 5120 4096-byte logical blocks: (21.0 MB/20.0 MiB)
+[    7.014463] sd 0:0:0:2: [sdc] Write Protect is off
+[    7.014465] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    7.015332] sd 0:0:0:2: [sdc] Write cache: disabled, read cache: enabled, supports DPO and FUA
+[    7.015336] sd 0:0:0:2: [sdc] Preferred minimum I/O size 4096 bytes
+[    7.015338] sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    7.018304] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.026909] sd 0:0:0:3: Attached scsi generic sg6 type 0
+[    7.032567]  sdc: sdc1 sdc2 sdc3 sdc4
+[    7.032710] sd 0:0:0:3: [sdd] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    7.032809] sd 0:0:0:3: [sdd] Write Protect is off
+[    7.032811] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    7.033055] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    7.033057] sd 0:0:0:3: [sdd] Preferred minimum I/O size 4096 bytes
+[    7.033058] sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    7.034994]  sdd: sdd1 sdd2 sdd3 sdd4
+[    7.035708] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    7.036670] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.037175] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.039188] sd 0:0:0:4: Attached scsi generic sg7 type 0
+[    7.039921] sd 0:0:0:4: [sde] 655360 4096-byte logical blocks: (2.68 GB/2.50 GiB)
+[    7.040022] sd 0:0:0:4: [sde] Write Protect is off
+[    7.040025] sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    7.040273] sd 0:0:0:4: [sde] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    7.040278] sd 0:0:0:4: [sde] Preferred minimum I/O size 4096 bytes
+[    7.040280] sd 0:0:0:4: [sde] Optimal transfer size 524288 bytes
+[    7.042340]  sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48 sde49 sde50 sde51 sde52 sde53 sde54 sde55 sde56 sde57
+[    7.042566] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    7.043380] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.043840] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.047008] sd 0:0:0:5: Attached scsi generic sg8 type 0
+[    7.047180] sd 0:0:0:5: [sdf] 51200 4096-byte logical blocks: (210 MB/200 MiB)
+[    7.047274] sd 0:0:0:5: [sdf] Write Protect is off
+[    7.047277] sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    7.047521] sd 0:0:0:5: [sdf] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    7.047524] sd 0:0:0:5: [sdf] Preferred minimum I/O size 4096 bytes
+[    7.047526] sd 0:0:0:5: [sdf] Optimal transfer size 524288 bytes
+[    7.048958] sd 0:0:0:5: [sdf] Attached SCSI disk
+[    7.049741] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.050236] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.054423] sd 0:0:0:4: [sde] Attached SCSI disk
+[    7.060269] sd 0:0:0:6: Attached scsi generic sg9 type 0
+[    7.060922] sd 0:0:0:6: [sdg] 262144 4096-byte logical blocks: (1.07 GB/1.00 GiB)
+[    7.061337] sd 0:0:0:6: [sdg] Write Protect is off
+[    7.061340] sd 0:0:0:6: [sdg] Mode Sense: 00 32 00 10
+[    7.062161] sd 0:0:0:6: [sdg] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    7.062166] sd 0:0:0:6: [sdg] Preferred minimum I/O size 4096 bytes
+[    7.062168] sd 0:0:0:6: [sdg] Optimal transfer size 524288 bytes
+[    7.066231] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.066611] sd 0:0:0:6: [sdg] Attached SCSI disk
+[    7.074330] sd 0:0:0:7: Attached scsi generic sg10 type 0
+[    7.074558] sd 0:0:0:7: [sdh] 262144 4096-byte logical blocks: (1.07 GB/1.00 GiB)
+[    7.074660] sd 0:0:0:7: [sdh] Write Protect is off
+[    7.074663] sd 0:0:0:7: [sdh] Mode Sense: 00 32 00 10
+[    7.074904] sd 0:0:0:7: [sdh] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    7.074908] sd 0:0:0:7: [sdh] Preferred minimum I/O size 4096 bytes
+[    7.074910] sd 0:0:0:7: [sdh] Optimal transfer size 524288 bytes
+[    7.076325] sd 0:0:0:7: [sdh] Attached SCSI disk
+[    7.080523] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.496137] Freeing unused kernel memory: 11072K
+[    7.497214] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.624564] Checked W+X mappings: passed, no W+X pages found
+[    7.630396] Run /init as init process
+[    7.634170]   with arguments:
+[    7.634173]     /init
+[    7.634175]   with environment:
+[    7.634177]     HOME=/
+[    7.634179]     TERM=linux
+[    7.634181]     BOOT_IMAGE=/boot/vmlinuz-6.8.0-1066-qcom
+[    7.930173] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.942014] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.954080] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.970565] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.982747] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    7.999303] geni_spi 888000.spi: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.009036] geni_spi 888000.spi: spi master firmware load failed ret: -517
+[    8.017802] arm-smmu 3da0000.iommu: probing hardware configuration...
+[    8.024465] arm-smmu 3da0000.iommu: SMMUv2 with:
+[    8.029242] arm-smmu 3da0000.iommu: 	stage 1 translation
+[    8.034698] arm-smmu 3da0000.iommu: 	coherent table walk
+[    8.040150] arm-smmu 3da0000.iommu: 	stream matching with 9 register groups
+[    8.044639] dwc3-qcom a600000.usb: Adding to iommu group 8
+[    8.047321] arm-smmu 3da0000.iommu: 	6 context banks (0 stage-2 only)
+[    8.059598] arm-smmu 3da0000.iommu: 	Supported page sizes: 0x61311000
+[    8.066218] arm-smmu 3da0000.iommu: 	Stage-1: 48-bit VA -> 36-bit IPA
+[    8.090570] arm-smmu 3da0000.iommu: 	preserved 0 boot mappings
+[    8.101291] measure-debugcc soc@0:clock-controller@0: Registered debug measure clocks
+[    8.111865] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.116002] dwc3-qcom a800000.usb: Adding to iommu group 9
+[    8.127907] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.140303] geni_spi 888000.spi: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.143944] rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: registered as rtc0
+[    8.150030] geni_spi 888000.spi: spi master firmware load failed ret: -517
+[    8.157389] rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: setting system clock to 1970-01-01T05:38:11 UTC (20291)
+[    8.161406] dwc3-qcom a400000.usb: Adding to iommu group 10
+[    8.168515] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.190797] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.192228] pwrseq-qcom_wcn wcn6855-pmu: supply vddaon not found, using dummy regulator
+[    8.201467] geni_spi 888000.spi: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.208754] pwrseq-qcom_wcn wcn6855-pmu: supply vddvm not found, using dummy regulator
+[    8.218321] geni_spi 888000.spi: spi master firmware load failed ret: -517
+[    8.226480] pwrseq-qcom_wcn wcn6855-pmu: supply vddvl not found, using dummy regulator
+[    8.234667] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.241651] pwrseq-qcom_wcn wcn6855-pmu: supply vddvh not found, using dummy regulator
+[    8.260228] geni_i2c a90000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.270455] geni_spi 888000.spi: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    8.280120] geni_spi 888000.spi: spi master firmware load failed ret: -517
+[    8.287843] geni_i2c 894000.i2c: Direct firmware load for qcom/sa8775p/qupv3fw.elf failed with error -2
+[    9.420880] raid6: neonx8   gen() 12832 MB/s
+[    9.441882] raid6: neonx4   gen() 12635 MB/s
+[    9.462878] raid6: neonx2   gen() 11928 MB/s
+[    9.483882] raid6: neonx1   gen() 10431 MB/s
+[    9.504883] raid6: int64x8  gen()  7794 MB/s
+[    9.525883] raid6: int64x4  gen()  7483 MB/s
+[    9.546883] raid6: int64x2  gen()  6159 MB/s
+[    9.567886] raid6: int64x1  gen()  4930 MB/s
+[    9.572277] raid6: using algorithm neonx8 gen() 12832 MB/s
+[    9.594881] raid6: .... xor() 10216 MB/s, rmw enabled
+[    9.600067] raid6: using neon recovery algorithm
+[    9.607474] xor: measuring software checksum speed
+[    9.612573]    8regs           : 18759 MB/sec
+[    9.617230]    32regs          : 18333 MB/sec
+[    9.621834]    arm64_neon      : 26313 MB/sec
+[    9.626311] xor: using function: arm64_neon (26313 MB/sec)
+[    9.634214] async_tx: api initialized (async)
+[    9.728240] Btrfs loaded, zoned=yes, fsverity=yes
+[    9.937540] EXT4-fs (sda3): mounted filesystem 123c042d-5a2f-4f72-a799-088b63157f3b ro with ordered data mode. Quota mode: none.
+[   10.071234] systemd[1]: System time before build time, advancing clock.
+[   10.093843] systemd[1]: Inserted module 'autofs4'
+[   10.139120] systemd[1]: systemd 255.4-1ubuntu8.12 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[   10.172737] systemd[1]: Detected virtualization vm-other.
+[   10.178301] systemd[1]: Detected architecture arm64.
+[   10.191158] systemd[1]: Hostname set to <qc-ubuntu>.
+[   10.578458] systemd[1]: Queued start job for default target graphical.target.
+[   10.597179] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[   10.616313] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[   10.635172] systemd[1]: Created slice user.slice - User and Session Slice.
+[   10.652006] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   10.673145] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[   10.697372] systemd[1]: Expecting device dev-smcinvoke.device - /dev/smcinvoke...
+[   10.712913] systemd[1]: Expecting device dev-ttyMSM0.device - /dev/ttyMSM0...
+[   10.728350] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   10.748362] systemd[1]: Reached target slices.target - Slice Units.
+[   10.763344] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+[   10.779329] systemd[1]: Reached target snapd.mounts.target - Mounted snaps.
+[   10.795325] systemd[1]: Reached target swap.target - Swaps.
+[   10.809347] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[   10.829581] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[   10.849626] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[   10.868185] systemd[1]: Listening on multipathd.socket - multipathd control socket.
+[   10.887646] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[   10.902130] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+[   10.922489] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[   10.942581] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[   10.963609] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[   10.979600] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[   10.999991] systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[   11.015115] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[   11.034107] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   11.067025] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[   11.086290] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   11.095595] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   11.137987] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   11.183762] systemd[1]: Starting systemd-journald.service - Journal Service...
+[   11.224196] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[   11.265795] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[   11.308105] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[   11.363113] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[   11.373083] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[   11.411977] systemd-journald[597]: Collecting audit messages is disabled.
+[   11.422489] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[   11.465390] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[   11.505817] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   11.549163] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[   11.588240] pstore: Using crash dump compression: deflate
+[   11.595444] systemd[1]: Started qcom-diag-router.service - diag-router Service.
+[   11.600799] pstore: Registered efi_pstore as persistent store backend
+[   11.651458] systemd[1]: Starting systemd-fsck-root.service - File System Check on Root Device...
+[   11.662298] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[   11.704031] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[   11.742969] systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[   11.760919] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   11.771373] systemd[1]: Started systemd-journald.service - Journal Service.
+[   11.816815] tz_log:[tzdbg_get_tz_version][1733]: tz diag version is 37765120
+[   11.860028] tz_log:[tzdbg_query_encrypted_log][1767]: encrypted qseelog enabled is 0
+[   11.903418] tz_log:[tzdbg_init_tme_log][1414]: Tme Crashdump address offset need to be defined!
+[   11.947677] tz_log:[tz_log_probe][1893]: Tme log initialization failed!
+[   11.993430] tpm_tis_spi spi16.0: 2.0 TPM (device-id 0x0, rev-id 78)
+[   12.035102] tpm tpm0: A TPM error (256) occurred attempting the self test
+[   12.073560] tpm tpm0: starting up the TPM manually
+[   12.073967] NET: Registered PF_QIPCRTR protocol family
+[   12.383392] EXT4-fs (sda3): re-mounted 123c042d-5a2f-4f72-a799-088b63157f3b r/w. Quota mode: none.
+[   12.449598] systemd-journald[597]: Received client request to flush runtime journal.
+[   12.470974] systemd-journald[597]: /var/log/journal/f91e05428342b5276a2d8da8ee5796ac/system.journal: Realtime clock jumped backwards relative to last journal entry, rotating.
+[   12.470985] systemd-journald[597]: Rotating system journal.
+[   12.644716] amc6821 20-0018: Revision 3
+[   12.650714] hd3ss3220 19-0067: probed revision=0x2
+[   12.684234] audit: type=1400 audit(1764094593.611:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=756 comm="apparmor_parser"
+[   12.684738] audit: type=1400 audit(1764094593.611:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=754 comm="apparmor_parser"
+[   12.684746] audit: type=1400 audit(1764094593.611:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=752 comm="apparmor_parser"
+[   12.684749] audit: type=1400 audit(1764094593.611:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="busybox" pid=760 comm="apparmor_parser"
+[   12.684751] audit: type=1400 audit(1764094593.611:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=759 comm="apparmor_parser"
+[   12.684753] audit: type=1400 audit(1764094593.611:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=758 comm="apparmor_parser"
+[   12.684756] audit: type=1400 audit(1764094593.611:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=753 comm="apparmor_parser"
+[   12.684918] audit: type=1400 audit(1764094593.611:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=755 comm="apparmor_parser"
+[   12.686816] audit: type=1400 audit(1764094593.613:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-run" pid=763 comm="apparmor_parser"
+[   12.687031] audit: type=1400 audit(1764094593.613:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="chrome" pid=764 comm="apparmor_parser"
+[   12.994003] cpu cpu0: EM: OPP:2016000 is inefficient
+[   12.994103] cpu cpu0: EM: created perf domain
+[   13.012739] cpu cpu4: EM: created perf domain
+[   13.018921] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   13.019233] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   13.019380] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   13.074387] ath11k_pci 0000:01:00.0: Adding to iommu group 11
+[   13.076316] ath11k_pci 0000:01:00.0: BAR 0 [mem 0x40400000-0x405fffff 64bit]: assigned
+[   13.076381] ath11k_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[   13.085311] qcrypto 1dfa000.crypto: Adding to iommu group 0
+[   13.137148] mc: Linux media interface: v0.10
+[   13.148902] ath11k_pci 0000:01:00.0: MSI vectors: 32
+[   13.148930] ath11k_pci 0000:01:00.0: qca6698aq hw2.1
+[   13.156227] EDAC DEVICE0: Giving out device to module qcom_llcc_edac controller llcc: DEV qcom_llcc_edac (INTERRUPT)
+[   13.182091] videodev: Linux video capture interface: v2.00
+[   13.199055] at24 18-0050: supply vcc not found, using dummy regulator
+[   13.219905] remoteproc remoteproc0: 20c00000.remoteproc is available
+[   13.237496] at24 18-0050: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+[   13.248511] remoteproc remoteproc0: powering up 20c00000.remoteproc
+[   13.252781] remoteproc remoteproc0: Booting fw image qcom/sa8775p/gpdsp0.mbn, size 5992448
+[   13.265338] msm_vidc_v4l2 aa00000.video-codec: Adding to iommu group 12
+[   13.268728] qcom-ethqos 23040000.ethernet: Adding to iommu group 13
+[   13.275521] msm_vidc: err : ffffffff: codec: __init_power_domains: opp name mx
+[   13.275529] msm_vidc: err : ffffffff: codec: __init_power_domains: opp name mmcx
+[   13.278290] qcom-ethqos 23040000.ethernet: IRQ eth_wake_irq not found
+[   13.278299] qcom-ethqos 23040000.ethernet: IRQ eth_lpi not found
+[   13.281489] msm_vidc_v4l2 aa00000.video-codec:non_secure_pixel_cb: Adding to iommu group 12
+[   13.289991] msm_vidc_v4l2 aa00000.video-codec:non_secure_cb: Adding to iommu group 12
+[   13.293681] msm_vidc_v4l2 aa00000.video-codec: bound aa00000.video-codec:non_secure_pixel_cb (ops msm_vidc_component_ops [iris_vpu])
+[   13.293731] msm_vidc_v4l2 aa00000.video-codec: bound aa00000.video-codec:non_secure_cb (ops msm_vidc_component_ops [iris_vpu])
+[   13.304733] qcom-ethqos 23040000.ethernet: User ID: 0x20, Synopsys ID: 0x52
+[   13.304749] qcom-ethqos 23040000.ethernet: 	DWMAC4/5
+[   13.304755] qcom-ethqos 23040000.ethernet: DMA HW capability register supported
+[   13.304759] qcom-ethqos 23040000.ethernet: RX Checksum Offload Engine supported
+[   13.304762] qcom-ethqos 23040000.ethernet: TX Checksum insertion supported
+[   13.304764] qcom-ethqos 23040000.ethernet: TSO supported
+[   13.304767] qcom-ethqos 23040000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[   13.304772] qcom-ethqos 23040000.ethernet: Enabled L3L4 Flow TC (entries=8)
+[   13.304776] qcom-ethqos 23040000.ethernet: Enabled RFS Flow TC (entries=10)
+[   13.304788] qcom-ethqos 23040000.ethernet: Enabling HW TC (entries=128, max_off=64)
+[   13.304791] qcom-ethqos 23040000.ethernet: TSO feature enabled
+[   13.304793] qcom-ethqos 23040000.ethernet: Using 36/40 bits DMA host/device width
+[   13.305315] remoteproc remoteproc1: 21c00000.remoteproc is available
+[   13.312408] remoteproc remoteproc2: 26300000.remoteproc is available
+[   13.315138] mhi mhi0: Requested to power ON
+[   13.315167] mhi mhi0: Power on setup success
+[   13.334911] usb-conn-gpio soc@0:connector-usb1: repeated role: none
+[   13.358764] remoteproc remoteproc0: remote processor 20c00000.remoteproc is now up
+[   13.360590] remoteproc remoteproc2: powering up 26300000.remoteproc
+[   13.363079] remoteproc remoteproc2: Booting fw image qcom/sa8775p/cdsp0.mbn, size 3170304
+[   13.363090] remoteproc remoteproc1: powering up 21c00000.remoteproc
+[   13.367560] remoteproc remoteproc1: Booting fw image qcom/sa8775p/gpdsp1.mbn, size 5959680
+[   13.379060] remoteproc remoteproc3: 2a300000.remoteproc is available
+[   13.385318] remoteproc remoteproc3: powering up 2a300000.remoteproc
+[   13.387500] remoteproc remoteproc3: Booting fw image qcom/sa8775p/cdsp1.mbn, size 3170304
+[   13.398260] remoteproc remoteproc4: 30000000.remoteproc is available
+[   13.404533] input: pmic_pwrkey as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1200/c440000.spmi:pmic@0:pon@1200:pwrkey/input/input0
+[   13.410521] remoteproc remoteproc4: powering up 30000000.remoteproc
+[   13.411022] input: pmic_resin as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1200/c440000.spmi:pmic@0:pon@1200:resin/input/input1
+[   13.415631] remoteproc remoteproc2: remote processor 26300000.remoteproc is now up
+[   13.416224] remoteproc remoteproc4: Booting fw image qcom/sa8775p/adsp.mbn, size 6799360
+[   13.430847] remoteproc remoteproc3: remote processor 2a300000.remoteproc is now up
+[   13.443915] mhi mhi0: Wait for device to enter SBL or Mission mode
+[   13.448916] msm_vidc: err : ffffffff: codec: __switch_gdsc_mode_iris3: Failed to read WRAPPER_CORE_POWER_STATUS register to 0x0
+[   13.448929] msm_vidc: err : ffffffff: codec: Failed to switch GDSC into HW control, err: -110
+[   13.480504] remoteproc remoteproc1: remote processor 21c00000.remoteproc is now up
+[   13.482359] msm_vidc: err : ffffffff: codec: __sys_set_power_control: skipping as power control hanfoff was not done
+[   13.501748] remoteproc remoteproc4: remote processor 30000000.remoteproc is now up
+[   13.510073] Bluetooth: Core ver 2.22
+[   13.510596] NET: Registered PF_BLUETOOTH protocol family
+[   13.510600] Bluetooth: HCI device and connection manager initialized
+[   13.510608] Bluetooth: HCI socket layer initialized
+[   13.510612] Bluetooth: L2CAP socket layer initialized
+[   13.510624] Bluetooth: SCO socket layer initialized
+[   13.560565] Bluetooth: HCI UART driver ver 2.3
+[   13.560591] Bluetooth: HCI UART protocol H4 registered
+[   13.560594] Bluetooth: HCI UART protocol BCSP registered
+[   13.561224] CAM_INFO: CAM-CRM: cam_req_mgr_probe: 1216: bypass driver parameter not found 
+[   13.564501] Bluetooth: HCI UART protocol LL registered
+[   13.564510] Bluetooth: HCI UART protocol ATH3K registered
+[   13.564824] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[   13.566054] Bluetooth: HCI UART protocol Intel registered
+[   13.568161] Bluetooth: HCI UART protocol Broadcom registered
+[   13.569050] Bluetooth: HCI UART protocol QCA registered
+[   13.569057] Bluetooth: HCI UART protocol AG6XX registered
+[   13.569098] hci_uart_qca serial0-0: supply vddio not found, using dummy regulator
+[   13.570315] Bluetooth: HCI UART protocol Marvell registered
+[   13.571665] msm_cam_smmu soc@0:qcom,cam_smmu:msm_cam_smmu_cdm: Adding to iommu group 14
+[   13.572748] hci_uart_qca serial0-0: supply vddbtcxmx not found, using dummy regulator
+[   13.573420] hci_uart_qca serial0-0: supply vddrfacmn not found, using dummy regulator
+[   13.579381] hci_uart_qca serial0-0: supply vddrfa0p8 not found, using dummy regulator
+[   13.579532] hci_uart_qca serial0-0: supply vddrfa1p7 not found, using dummy regulator
+[   13.579948] hci_uart_qca serial0-0: supply vddrfa1p2 not found, using dummy regulator
+[   13.581839] msm_cam_smmu soc@0:qcom,cam_smmu:msm_cam_smmu_icp: Adding to iommu group 15
+[   13.594481] msm_cam_smmu soc@0:qcom,cam_smmu:msm_cam_smmu_ife: Adding to iommu group 16
+[   13.711872] Bluetooth: hci0: setting up wcn6855
+[   13.716781] Bluetooth: hci0: QCA Product ID   :0x00000013
+[   13.716795] Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[   13.716798] Bluetooth: hci0: QCA ROM Version  :0x00000201
+[   13.716801] Bluetooth: hci0: QCA Patch Version:0x000038e6
+[   13.782264] Bluetooth: hci0: QCA controller version 0x12110201
+[   13.782278] Bluetooth: hci0: QCA Downloading qca/wcnhpbtfw21.tlv
+[   13.869294] adreno 3d00000.gpu: Adding to iommu group 17
+[   13.883429] msm-mdss ae00000.display-subsystem: Adding to iommu group 18
+[   13.885640] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   13.885656] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   13.885659] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   13.885661] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   13.885663] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   13.885664] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   13.885666] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   13.885667] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   13.890223] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af5c000
+[   13.890240] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[   13.894258] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   13.894268] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   13.894270] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   13.894272] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   13.953591] qcom,fastrpc 20c00000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   13.955069] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[   13.967473] qcom-ethqos 23040000.ethernet end0: renamed from eth0
+[   13.969632] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[   13.993132] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 19
+[   13.994902] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 20
+[   13.995153] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af5c000
+[   13.995352] /soc@0/display-subsystem@ae00000/displayport-controller@af5c000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[   13.997436] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 21
+[   14.022583] SPI driver qcom_eeprom has no spi_device_id for qcom,eeprom
+[   14.028925] msm_dpu ae01000.display-controller: bound af54000.displayport-controller (ops msm_dp_display_comp_ops [msm])
+[   14.033045] msm_dpu ae01000.display-controller: bound af5c000.displayport-controller (ops msm_dp_display_comp_ops [msm])
+[   14.033731] adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+[   14.033798] adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+[   14.056943] platform 3d6a000.gmu: Adding to iommu group 22
+[   14.063252] msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops a3xx_ops [msm])
+[   14.063994] [drm:dpu_kms_hw_init:1088] dpu hardware revision:0x80040000
+[   14.065603] [drm] Initialized msm 1.12.0 20130625 for ae01000.display-controller on minor 0
+[   14.068965] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/a660_sqe.fw from new location
+[   14.069738] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/a663_gmu.bin from new location
+[   14.079272] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[   14.079706] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[   14.079726] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[   14.080632] qcom,fastrpc 2a300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   14.086781] ath11k_pci 0000:01:00.0: chip_id 0x12 chip_family 0xb board_id 0x10c soc_id 0x400c1211
+[   14.086795] ath11k_pci 0000:01:00.0: fw_version 0x11021302 fw_build_timestamp 2026-02-04 08:10 fw_build_id WLAN.HSP.1.1-04866.5-QCAHSPSWPL_V1_V2_SILICONZ_IOE-1
+[   14.089837] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 23
+[   14.092684] qcom,fastrpc 26300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   14.101958] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 24
+[   14.102026] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam-sync (ops cam_sync_component_ops [camera_qcs9100])
+[   14.102151] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam_smmu (ops cam_smmu_component_ops [camera_qcs9100])
+[   14.102238] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam_smmu:msm_cam_smmu_secure (ops cam_smmu_cb_component_ops [camera_qcs9100])
+[   14.102323] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam_smmu:msm_cam_smmu_cdm (ops cam_smmu_cb_component_ops [camera_qcs9100])
+[   14.102419] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam_smmu:msm_cam_smmu_icp (ops cam_smmu_cb_component_ops [camera_qcs9100])
+[   14.102501] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam_smmu:msm_cam_smmu_ife (ops cam_smmu_cb_component_ops [camera_qcs9100])
+[   14.104051] CAM_INFO: CAM-SMMU: cam_smmu_need_force_alloc_cached: 492: force_cache_allocs=1 
+[   14.104052] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 25
+[   14.104063] CAM_ERR: CAM-MEM: cam_mem_mgr_get_dma_heaps: 809: qcom,display heap not found, rc=0 
+[   14.104263] CAM_WARN: CAM-CRM: cam_req_mgr_close: 211: release invoked associated userspace process has died, open_cnt: 1 
+[   14.104749] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 26
+[   14.105635] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac11000.qcom,cam-cpas (ops cam_cpas_dev_component_ops [camera_qcs9100])
+[   14.105815] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 27
+[   14.105979] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam-cdm-intf (ops cam_cdm_intf_component_ops [camera_qcs9100])
+[   14.107238] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 28
+[   14.108262] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 29
+[   14.108486] CAM_ERR: CAM-CPAS: cam_cpas_subdev_ioctl: 1457: Invalid command -2140645888 for CPAS! 
+[   14.109195] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 30
+[   14.109811] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac29000.qcom,rt-cdm3 (ops cam_hw_cdm_component_ops [camera_qcs9100])
+[   14.110327] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 31
+[   14.111180] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 32
+[   14.111947] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 33
+[   14.112785] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 34
+[   14.113203] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 35
+[   14.113772] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 36
+[   14.114094] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 37
+[   14.114674] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@9: Adding to iommu group 38
+[   14.114989] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 39
+[   14.115633] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@10: Adding to iommu group 40
+[   14.116856] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@11: Adding to iommu group 41
+[   14.117246] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@9: Adding to iommu group 42
+[   14.117758] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@12: Adding to iommu group 43
+[   14.118066] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@11: Adding to iommu group 44
+[   14.119115] qcom,fastrpc-cb 2a300000.remoteproc:glink-edge:fastrpc:compute-cb@13: Adding to iommu group 45
+[   14.119747] qcom,fastrpc 21c00000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   14.120493] qcom,fastrpc-cb 21c00000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 46
+[   14.121099] qcom,fastrpc-cb 21c00000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 47
+[   14.121699] qcom,fastrpc-cb 21c00000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 48
+[   14.123564] qcom,fastrpc 30000000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   14.123862] fastrpc: fastrpc_setup_service_locator: pdr_add_lookup enabled for avs/audio (audio_pdr_adsp, msm/adsp/audio_pd)
+[   14.124018] fastrpc: fastrpc_setup_service_locator: pdr_add_lookup enabled for tms/servreg (sensors_pdr_adsp, msm/adsp/sensor_pd)
+[   14.124471] qcom,fastrpc-cb 30000000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 49
+[   14.124845] CAM_ERR: CAM-CPAS: cam_cpastop_qchannel_handshake: 1229: CPAS_START CAMNOC_COMBINED idle sequence failed, qstat 0x0 
+[   14.124867] CAM_WARN: CAM-CPAS: cam_cpas_hw_start: 2519: failed in qchannel_handshake rc=-22 
+[   14.125793] qcom,fastrpc-cb 30000000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 50
+[   14.126294] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac28000.qcom,rt-cdm2 (ops cam_hw_cdm_component_ops [camera_qcs9100])
+[   14.126550] qcom,fastrpc-cb 30000000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 51
+[   14.147771] CAM_ERR: CAM-CPAS: cam_cpastop_qchannel_handshake: 1229: CPAS_START CAMNOC_COMBINED idle sequence failed, qstat 0x0 
+[   14.147799] CAM_WARN: CAM-CPAS: cam_cpas_hw_start: 2519: failed in qchannel_handshake rc=-22 
+[   14.150369] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac27000.qcom,rt-cdm1 (ops cam_hw_cdm_component_ops [camera_qcs9100])
+[   14.167754] CAM_ERR: CAM-CPAS: cam_cpastop_qchannel_handshake: 1229: CPAS_START CAMNOC_COMBINED idle sequence failed, qstat 0x0 
+[   14.167782] CAM_WARN: CAM-CPAS: cam_cpas_hw_start: 2519: failed in qchannel_handshake rc=-22 
+[   14.168790] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac26000.qcom,rt-cdm0 (ops cam_hw_cdm_component_ops [camera_qcs9100])
+[   14.169420] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac7c000.qcom,csid1 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.169866] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac7a000.qcom,csid0 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.170266] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac94000.qcom,csid-lite4 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.170648] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac90000.qcom,csid-lite3 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.171039] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac8c000.qcom,csid-lite2 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.171414] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac88000.qcom,csid-lite1 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.171794] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac84000.qcom,csid-lite0 (ops cam_ife_csid_component_ops [camera_qcs9100])
+[   14.172230] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac94000.qcom,ife-lite4 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.172642] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac90000.qcom,ife-lite3 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.173037] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac8c000.qcom,ife-lite2 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.173405] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac88000.qcom,ife-lite1 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.173770] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac84000.qcom,ife-lite0 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.174154] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac5a000.qcom,ife1 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.174509] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac4d000.qcom,ife0 (ops cam_vfe_component_ops [camera_qcs9100])
+[   14.174845] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac75000.qcom,sfe-lite1 (ops cam_sfe_component_ops [camera_qcs9100])
+[   14.175180] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac74000.qcom,sfe-lite0 (ops cam_sfe_component_ops [camera_qcs9100])
+[   14.175311] CAM_ERR: CAM-ISP: cam_vfe_hw_init: 266: inval param 
+[   14.175645] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam-isp (ops cam_isp_dev_component_ops [camera_qcs9100])
+[   14.175738] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam-res-mgr (ops cam_res_mgr_component_ops [camera_qcs9100])
+[   14.176660] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3 (ops cam_cci_component_ops [camera_qcs9100])
+[   14.178106] CAM_ERR: CAM-CORE: cam_subdev_ioctl: 84: Invalid command -2140645888 for cam-isp 
+[   14.178072] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2 (ops cam_cci_component_ops [camera_qcs9100])
+[   14.178940] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1 (ops cam_cci_component_ops [camera_qcs9100])
+[   14.179727] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0 (ops cam_cci_component_ops [camera_qcs9100])
+[   14.180462] cam_req_mgr soc@0:qcom,cam-req-mgr: bound aca2000.qcom,csiphy3 (ops cam_csiphy_component_ops [camera_qcs9100])
+[   14.181834] cam_req_mgr soc@0:qcom,cam-req-mgr: bound aca0000.qcom,csiphy2 (ops cam_csiphy_component_ops [camera_qcs9100])
+[   14.182685] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac9e000.qcom,csiphy1 (ops cam_csiphy_component_ops [camera_qcs9100])
+[   14.183902] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   14.184306] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   14.184914] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac9c000.qcom,csiphy0 (ops cam_csiphy_component_ops [camera_qcs9100])
+[   14.185704] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.185713] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-sensor30 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.186360] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.186380] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   14.186368] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-sensor23 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.186511] qcom,camera ac16000.qcom,cci3:qcom,cam-gmsl-sensor15: supply cam_vio not found, using dummy regulator
+[   14.186696] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac16000.qcom,cci3:qcom,cam-gmsl-sensor15 
+[   14.186845] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.186851] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-gmsl-sensor15 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.187016] qcom,camera ac16000.qcom,cci3:qcom,cam-gmsl-sensor14: supply cam_vio not found, using dummy regulator
+[   14.187219] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   14.187392] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac16000.qcom,cci3:qcom,cam-gmsl-sensor14 
+[   14.188083] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.188093] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-gmsl-sensor14 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.188262] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.188265] qcom,camera ac16000.qcom,cci3:qcom,cam-gmsl-sensor13: supply cam_vio not found, using dummy regulator
+[   14.188400] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac16000.qcom,cci3:qcom,cam-gmsl-sensor13 
+[   14.189971] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.189982] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-gmsl-sensor13 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.190142] qcom,camera ac16000.qcom,cci3:qcom,cam-gmsl-sensor12: supply cam_vio not found, using dummy regulator
+[   14.190202] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac16000.qcom,cci3:qcom,cam-gmsl-sensor12 
+[   14.190398] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.190403] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,cam-gmsl-sensor12 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.190622] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.190629] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.191646] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.193584] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.193597] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-sensor29 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.193996] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.194137] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.194143] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-sensor22 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.194320] qcom,camera ac15000.qcom,cci2:qcom,cam-gmsl-sensor11: supply cam_vio not found, using dummy regulator
+[   14.194468] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac15000.qcom,cci2:qcom,cam-gmsl-sensor11 
+[   14.194551] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.194556] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-gmsl-sensor11 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.194649] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.194688] qcom,camera ac15000.qcom,cci2:qcom,cam-gmsl-sensor10: supply cam_vio not found, using dummy regulator
+[   14.194741] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac15000.qcom,cci2:qcom,cam-gmsl-sensor10 
+[   14.195072] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.195083] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-gmsl-sensor10 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.195231] qcom,camera ac15000.qcom,cci2:qcom,cam-gmsl-sensor9: supply cam_vio not found, using dummy regulator
+[   14.196440] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac15000.qcom,cci2:qcom,cam-gmsl-sensor9 
+[   14.196602] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.196610] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-gmsl-sensor9 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.196767] qcom,camera ac15000.qcom,cci2:qcom,cam-gmsl-sensor8: supply cam_vio not found, using dummy regulator
+[   14.196867] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac15000.qcom,cci2:qcom,cam-gmsl-sensor8 
+[   14.197028] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.197035] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,cam-gmsl-sensor8 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.197088] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.197691] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.197976] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.197985] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-sensor28 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.198254] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.199497] CAM_ERR: CAM-SENSOR: cam_sensor_subdev_ioctl: 83: Invalid ioctl cmd: -2140645888 
+[   14.199642] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.199653] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-sensor26 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.201621] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.201633] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-sensor21 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.201834] qcom,camera ac14000.qcom,cci1:qcom,cam-gmsl-sensor7: supply cam_vio not found, using dummy regulator
+[   14.202063] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac14000.qcom,cci1:qcom,cam-gmsl-sensor7 
+[   14.202201] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.202207] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-gmsl-sensor7 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.202358] qcom,camera ac14000.qcom,cci1:qcom,cam-gmsl-sensor6: supply cam_vio not found, using dummy regulator
+[   14.202413] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac14000.qcom,cci1:qcom,cam-gmsl-sensor6 
+[   14.202472] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.202475] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-gmsl-sensor6 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.202595] qcom,camera ac14000.qcom,cci1:qcom,cam-gmsl-sensor5: supply cam_vio not found, using dummy regulator
+[   14.202946] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac14000.qcom,cci1:qcom,cam-gmsl-sensor5 
+[   14.204617] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.204628] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-gmsl-sensor5 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.204822] qcom,camera ac14000.qcom,cci1:qcom,cam-gmsl-sensor4: supply cam_vio not found, using dummy regulator
+[   14.204927] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac14000.qcom,cci1:qcom,cam-gmsl-sensor4 
+[   14.205019] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.205023] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,cam-gmsl-sensor4 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.206578] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.206590] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-sensor27 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.207993] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.208004] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-sensor24 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.209036] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.209058] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-sensor1 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.209257] qcom,camera ac13000.qcom,cci0:qcom,cam-gmsl-sensor3: supply cam_vio not found, using dummy regulator
+[   14.210212] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac13000.qcom,cci0:qcom,cam-gmsl-sensor3 
+[   14.210577] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.210586] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-gmsl-sensor3 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.210758] qcom,camera ac13000.qcom,cci0:qcom,cam-gmsl-sensor2: supply cam_vio not found, using dummy regulator
+[   14.210840] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac13000.qcom,cci0:qcom,cam-gmsl-sensor2 
+[   14.210988] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.210993] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-gmsl-sensor2 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.211111] qcom,camera ac13000.qcom,cci0:qcom,cam-gmsl-sensor1: supply cam_vio not found, using dummy regulator
+[   14.211963] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac13000.qcom,cci0:qcom,cam-gmsl-sensor1 
+[   14.212081] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.212087] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-gmsl-sensor1 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.212235] qcom,camera ac13000.qcom,cci0:qcom,cam-gmsl-sensor0: supply cam_vio not found, using dummy regulator
+[   14.212360] CAM_WARN: CAM-UTIL: cam_soc_util_configure_pd: 3427: DBG: power-domains not defined for ac13000.qcom,cci0:qcom,cam-gmsl-sensor0 
+[   14.212449] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 4 
+[   14.212453] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,cam-gmsl-sensor0 (ops cam_sensor_component_ops [camera_qcs9100])
+[   14.212812] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.212816] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac16000.qcom,cci3:qcom,eeprom30 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.213996] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.214006] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac15000.qcom,cci2:qcom,eeprom29 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.215158] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.215170] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,eeprom28 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.215643] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.215652] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac14000.qcom,cci1:qcom,eeprom26 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.216352] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.216361] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,eeprom27 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.216659] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.217244] CAM_INFO: CAM-SENSOR: cam_sensor_module_add_i2c_device: 265: Adding device type: 1 
+[   14.217257] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac13000.qcom,cci0:qcom,eeprom24 (ops cam_eeprom_component_ops [camera_qcs9100])
+[   14.217334] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.217790] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.217988] CAM_INFO: CAM-TPG: tpg_1_3_layer_init: 892: Layer init called 
+[   14.217998] cam_req_mgr soc@0:qcom,cam-req-mgr: bound acae000.qcom,tpg19 (ops cam_tpg_component_ops [camera_qcs9100])
+[   14.218488] CAM_INFO: CAM-TPG: tpg_1_3_layer_init: 892: Layer init called 
+[   14.218497] cam_req_mgr soc@0:qcom,cam-req-mgr: bound acad000.qcom,tpg18 (ops cam_tpg_component_ops [camera_qcs9100])
+[   14.218765] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.218802] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.219012] CAM_INFO: CAM-TPG: tpg_1_3_layer_init: 892: Layer init called 
+[   14.219020] cam_req_mgr soc@0:qcom,cam-req-mgr: bound acac000.qcom,tpg17 (ops cam_tpg_component_ops [camera_qcs9100])
+[   14.219194] CAM_WARN: CAM-ICP: cam_icp_soc_get_fw_pas_id: 168: PAS_ID is not passed from DTSI and use default value: 33 
+[   14.219677] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac01000.qcom,icp (ops cam_icp_v2_component_ops [camera_qcs9100])
+[   14.220073] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   14.220669] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   14.220809] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   14.220893] cam_req_mgr soc@0:qcom,cam-req-mgr: bound ac2d000.qcom,ipe0 (ops cam_ipe_component_ops [camera_qcs9100])
+[   14.221304] CAM_INFO: CAM-ICP: cam_get_domain_for_fw: 295: camera-firmware, not overlayed. no KVM 
+[   14.221484] cam_req_mgr soc@0:qcom,cam-req-mgr: bound soc@0:qcom,cam-icp (ops cam_icp_component_ops [camera_qcs9100])
+[   14.221577] CAM_INFO: CAM-CRM: cam_req_mgr_component_master_bind: 1099: All components bound successfully, Spectra camera driver initialized 
+[   14.222223] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   14.223853] CAM_ERR: CAM-MEM: cam_mem_mgr_reserve_memory_region: 2262: failed. mem_mgr not initialized 
+[   14.223863] CAM_ERR: CAM-ICP: cam_icp_allocate_hfi_mem: 3582: [icp] Unable to reserve fw uncached memory rc -22 
+[   14.224090] CAM_ERR: CAM-ICP: cam_icp_mgr_hw_open: 4971: [icp] Failed in alloc hfi mem, rc -22 
+[   14.224093] CAM_ERR: CAM-ICP: cam_icp_subdev_open: 172: FW download failed for device [cam-icp] 
+[   14.403574] Bluetooth: hci0: QCA Downloading qca/wcnhpnv21g.b10c
+[   14.420723] ath11k_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[   14.584768] Bluetooth: hci0: QCA setup on UART is completed
+[   14.621471] Bluetooth: hci0: AOSP extensions version v0.98
+[   14.621483] Bluetooth: hci0: AOSP quality report is supported
+[   14.895614] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   14.895624] Bluetooth: BNEP filters: protocol multicast
+[   14.895632] Bluetooth: BNEP socket layer initialized
+[   14.897741] Bluetooth: MGMT ver 1.22
+[   14.901273] NET: Registered PF_ALG protocol family
+[   14.991692] PDR: service lookup for tms/servreg failed: -6
+[   15.030389] qcom,apr 30000000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:1
+[   15.030486] qcom,apr 30000000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:2
+[   15.030805] qcom,fastrpc 30000000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: fastrpc_pdr_cb: msm/adsp/audio_pd (audio_pdr_adsp) is up for PDR on 0
+[   15.260258] loop0: detected capacity change from 0 to 8
+[   15.441653] systemd-journald[597]: Time jumped backwards, rotating.
+[   16.649801] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   16.650364] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-1
+[   16.650803] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-2
+[   16.651322] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-3
+[   16.716241] qcom-ethqos 23040000.ethernet end0: PHY [stmmac-0:1c] driver [Qualcomm QCA8081] (irq=POLL)
+[   16.728416] qcom-ethqos 23040000.ethernet end0: Enabling Safety Features
+[   16.738498] qcom-ethqos 23040000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[   16.739189] qcom-ethqos 23040000.ethernet end0: registered PTP clock
+[   16.739966] qcom-ethqos 23040000.ethernet end0: FPE workqueue start
+[   16.739975] qcom-ethqos 23040000.ethernet end0: configuring for phy/2500base-x link mode
+[   16.981661] Creating QWES LICENSE STORE : /var/persist/qtee_supplicant/pfm//licenses/
+[   17.002425] Qwesd Service Completed
+[   17.039248] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.057896] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   17.061905] qcom-apm gprsvc:service:2:1: CMD timeout for [1001021] opcode
+[   17.070684] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.076341] q6apm-dai 30000000.remoteproc:glink-edge:gpr:service@1:dais: Adding to iommu group 52
+[   17.076896] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   17.079647] snd-sc8280xp sound: ASoC: Parent card not yet available, widget card binding deferred
+[   17.080497] ALSA: Control name 'stream0.vol_ctrl0 MultiMedia1 Playback Volume' truncated to 'stream0.vol_ctrl0 MultiMedia1 Playback Volu'
+[   17.081002] input: LEMANS-EVK DP0 Jack as /devices/platform/sound/sound/card0/input2
+[   17.096198] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.103893] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   17.112160] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.112455] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.120902] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   17.130897] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   17.134549] smcinvoke: server_release: qwesd server terminated (refs: 2).
+[   17.144900] smcinvoke: ____destroy_server_info: qwesd server destroyed.
+[   22.471566] wlp1s0: authenticate with f0:61:c0:fb:9a:d0 (local address=44:f7:9f:bb:67:5f)
+[   22.471581] wlp1s0: send auth to f0:61:c0:fb:9a:d0 (try 1/3)
+[   22.474382] wlp1s0: authenticated
+[   22.475941] wlp1s0: associate with f0:61:c0:fb:9a:d0 (try 1/3)
+[   22.482534] wlp1s0: RX AssocResp from f0:61:c0:fb:9a:d0 (capab=0x411 status=0 aid=3)
+[   22.502441] wlp1s0: associated
+[   23.850523] msm_vidc: err : ffffffff: codec: __switch_gdsc_mode_iris3: Failed to read WRAPPER_CORE_POWER_STATUS register to 0x0
+[   23.850535] msm_vidc: err : ffffffff: codec: Failed to switch GDSC into HW control, err: -110
+[   23.850770] msm_vidc: err : ffffffff: codec: __sys_set_power_control: skipping as power control hanfoff was not done
+[   23.850941] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   23.850946] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   23.850948] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   23.850950] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   23.850951] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   23.850953] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   23.850954] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   23.850956] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   23.851510] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   23.851514] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   23.851515] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   23.851516] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   23.851641] CAM_INFO: CAM-SMMU: cam_smmu_need_force_alloc_cached: 492: force_cache_allocs=1 
+[   23.851658] CAM_ERR: CAM-MEM: cam_mem_mgr_get_dma_heaps: 809: qcom,display heap not found, rc=0 
+[   23.851933] CAM_WARN: CAM-CRM: cam_req_mgr_close: 211: release invoked associated userspace process has died, open_cnt: 1 
+[   23.851946] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[17] shutdown cleanup. 
+[   23.851950] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[18] shutdown cleanup. 
+[   23.851953] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[19] shutdown cleanup. 
+[   23.851959] CAM_ERR: CAM-CORE: cam_subdev_ioctl: 79: shutdown device failed(rc = -22) for cam-isp 
+[   23.851976] CAM_WARN: CAM-CPAS: __cam_cpas_subdev_close: 1414: device already closed, open_cnt: 0 
+[   23.852214] Bluetooth: RFCOMM TTY layer initialized
+[   23.852228] Bluetooth: RFCOMM socket layer initialized
+[   23.852239] Bluetooth: RFCOMM ver 1.11
+[   23.855703] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   23.855715] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   23.855720] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   23.855724] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   23.856246] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   23.856253] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   23.856256] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   23.856258] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   24.969031] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   24.969044] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   24.969046] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   24.969047] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   24.970750] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0086-f25cab1d6a69d1897ee6bc8dd246c94afe204d46
+[   24.970759] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=16MB
+[   24.970760] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hyd-lablnx446
+[   24.970761] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Nov 18 2024 14:39:55
+[   24.971307] CAM_ERR: CAM-CPAS: cam_cpas_subdev_ioctl: 1457: Invalid command -2140645888 for CPAS! 
+[   24.971345] CAM_ERR: CAM-CORE: cam_subdev_ioctl: 84: Invalid command -2140645888 for cam-isp 
+[   24.971477] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   24.971592] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   24.971625] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   24.971637] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   24.971649] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   24.971661] CAM_ERR: CAM-EEPROM: cam_eeprom_subdev_ioctl: 78: Invalid ioctl cmd: -2140645888 
+[   24.971694] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   24.971706] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   24.971718] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   24.971730] CAM_ERR: CAM-TPG: cam_tpg_subdev_ioctl: 67: Wrong ioctl : -2140645888 
+[   24.971752] CAM_ERR: CAM-MEM: cam_mem_mgr_reserve_memory_region: 2262: failed. mem_mgr not initialized 
+[   24.971756] CAM_ERR: CAM-ICP: cam_icp_allocate_hfi_mem: 3582: [icp] Unable to reserve fw uncached memory rc -22 
+[   24.971981] CAM_ERR: CAM-ICP: cam_icp_mgr_hw_open: 4971: [icp] Failed in alloc hfi mem, rc -22 
+[   24.971985] CAM_ERR: CAM-ICP: cam_icp_subdev_open: 172: FW download failed for device [cam-icp] 
+[   24.972247] CAM_ERR: CAM-CSIPHY: cam_csiphy_subdev_ioctl: 398: Wrong ioctl : -2140645888 
+[   24.972348] CAM_INFO: CAM-SMMU: cam_smmu_need_force_alloc_cached: 492: force_cache_allocs=1 
+[   24.972356] CAM_ERR: CAM-MEM: cam_mem_mgr_get_dma_heaps: 809: qcom,display heap not found, rc=0 
+[   24.972537] CAM_WARN: CAM-CRM: cam_req_mgr_close: 211: release invoked associated userspace process has died, open_cnt: 1 
+[   24.972543] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[17] shutdown cleanup. 
+[   24.972547] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[18] shutdown cleanup. 
+[   24.972549] CAM_INFO: CAM-TPG: cam_tpg_shutdown: 15: TPG[19] shutdown cleanup. 
+[   24.972554] CAM_ERR: CAM-CORE: cam_subdev_ioctl: 79: shutdown device failed(rc = -22) for cam-isp 
+[   24.972567] CAM_WARN: CAM-CPAS: __cam_cpas_subdev_close: 1414: device already closed, open_cnt: 0 
+[   25.027521] rfkill: input handler disabled
+[   27.430756] qnoc-sa8775p interconnect-mc-virt: Timed out. Forcing sync_state()
+[   27.430771] qnoc-sa8775p 9100000.interconnect-gem-noc: Timed out. Forcing sync_state()
+[   37.158798] vbus_supply_2: disabling
+[   37.158954] vbus_supply_0: disabling
+[   37.160540] vbus_supply_1: disabling
+[   47.157342] smcinvoke: server_release: qwes exp server terminated (refs: 2).
+[   47.160904] smcinvoke: ____destroy_server_info: qwes exp server destroyed.
